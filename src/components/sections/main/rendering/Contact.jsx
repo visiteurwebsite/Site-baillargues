@@ -1,10 +1,14 @@
 import { AiTwotoneMail } from 'react-icons/ai';
 import { IoIosPhonePortrait } from 'react-icons/io';
 import { Map } from '../../../UI/Map';
+import { Reviews } from './Reviews';
 export function Contact() {
   return (
     <section id="contact" className="py-16 bg-gray-100 dark:bg-gray-900">
-      <div className="container mx-auto">
+      <div className="container mx-auto pb-16">
+        <h2 className="text-2xl font-bold mb-8 md:text-4xl text-center pb-16">
+          Contactez-nous
+        </h2>
         <div className="flex">
           <div className="flex flex-col text-left w-1/3 gap-2">
             <h2 className="text-2xl font-bold mb-8 md:text-4xl">
@@ -37,6 +41,7 @@ export function Contact() {
           </div>
         </div>
       </div>
+      <Reviews />
     </section>
   );
 }

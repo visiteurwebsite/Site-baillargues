@@ -1,11 +1,17 @@
-import Link from 'next/link';
+'use client';
 import { FaArrowDown } from 'react-icons/fa';
 
 const ArrowDown = ({ size, color }) => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    const servicesSection = document.getElementById('services');
+    servicesSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <Link href="#services">
+    <a href="#services" onClick={handleClick}>
       <FaArrowDown size={size} color={color} className="animate-bounce" />
-    </Link>
+    </a>
   );
 };
 
