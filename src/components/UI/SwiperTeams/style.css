@@ -1,0 +1,233 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+}
+
+.swiper {
+  width: 100%;
+  padding: 60px 0;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 400px;
+  height: 520px;
+  box-shadow: 1px 22px 44px rgba(0, 0, 0, 0.2);
+  border-radius: 20% 6px 20% 6px;
+  overflow: hidden;
+  transition: 1s;
+  user-select: none;
+}
+
+.swiper-slide-active {
+  border: 3px solid #055fb3;
+  transition: 0.6s ease-in-out;
+}
+
+.slide-0 {
+  background: url(../../../../public/dominique.jpg) no-repeat center center /
+    cover;
+}
+
+.slide-1 {
+  background: url(../../../../public/serena.jpg) no-repeat center center / cover;
+}
+
+.slide-2 {
+  background: url(../../../../public/cerclet.jpg) no-repeat center center /
+    cover;
+}
+
+.slide-3 {
+  background: url(../../../../public/huges.jpg) no-repeat center center / cover;
+}
+
+.slide-4 {
+  background: url(../../../../public/dominique.jpg) no-repeat center center /
+    cover;
+}
+
+.slide-5 {
+  background: url(../../../../public/carlene.jpg) no-repeat center center /
+    cover;
+}
+
+.slide-6 {
+  background: url(../../../../public/huges.jpg) no-repeat center center / cover;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 25px 25px 30px;
+}
+
+.title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #fff;
+  opacity: 1;
+}
+
+.swiper-slide-active .title h2 {
+  opacity: 0;
+  transition: 0.8s;
+  transition-delay: 1.5s;
+}
+.swiper-slide-active .title p {
+  opacity: 0;
+  transition: 0.8s;
+  transition-delay: 1.5s;
+}
+.content {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 25px 25px 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background: rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    transparent,
+    rgba(0, 0, 0, 0.6),
+    rgb(0, 0, 0, 0.8)
+  );
+  color: #fff;
+  opacity: 0;
+}
+
+.swiper-slide-active .content {
+  opacity: 1;
+  transform: 0.8s;
+  transition-delay: 1.5s;
+}
+
+.text {
+  border-left: 4px solid #055fb3;
+  padding-left: 10px;
+
+  opacity: 0;
+}
+
+.swiper-slide-active .text {
+  opacity: 1;
+  transition: 1s;
+  transition-delay: 2s;
+}
+.text h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.swiper-slide-active .text h3 {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
+  transition-delay: 2.2s;
+}
+
+.text p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  opacity: 0;
+  line-height: 1.4;
+  transform: translateY(-100%);
+}
+
+.swiper-slide-active .text p {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1.5s;
+  transition-delay: 1.8s;
+}
+
+.genre {
+  position: absolute;
+  bottom: 20px;
+  left: 25px;
+  display: flex;
+  gap: 10px;
+}
+
+.genre span {
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 400;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  opacity: 0;
+}
+
+.swiper-slide-active .genre span {
+  opacity: 1;
+  transition: 1s ease-out;
+  transition-delay: calc(2.4s + var(--i) * 0.4s);
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  width: 35px;
+  border-radius: 14px;
+  background: linear-gradient(120deg, #055fb3, #055fb3);
+  box-shadow: 0 0 20px rgba(16, 102, 201, 0.7);
+  transition: all 0.8s ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .swiper-slide {
+    width: 300px;
+  }
+  .title h2 {
+    font-size: 2rem;
+  }
+  .text p {
+    font-size: 0.8rem;
+  }
+  .genre span {
+    font-size: 0.7rem;
+  }
+  .score {
+    width: 35px;
+    font-size: 1rem;
+  }
+  .text h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  .text p {
+    font-size: 0.8rem;
+  }
+  .genre {
+    gap: 5px;
+  }
+  .genre span {
+    font-size: 0.6rem;
+    padding: 2px 5px;
+  }
+}

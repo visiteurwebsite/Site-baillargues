@@ -9,7 +9,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #353535;
     --foreground: #ededed;
   }
 }
@@ -24,4 +24,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.bg-equipe {
+  background-image: url('/equipe.jpg');
+  background-size: cover;
+  background-position: top;
 }
