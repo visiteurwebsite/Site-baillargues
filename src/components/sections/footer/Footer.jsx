@@ -70,9 +70,3 @@ export function Footer() {
     </footer>
   );
 }
-
-{
-  /* <p className="text-2xl font-bold">
-  &copy; 2024 Clinique Vétérinaire de Baillargues. Tous droits réservés.
-</p> */
-}

@@ -13,7 +13,7 @@ export const HeroParallax = ({ products = gallery }) => {
     offset: ['start start', 'end start']
   });
 
-  const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
+  const springConfig = { stiffness: 100, damping: 30, bounce: 0 };
 
   const translateX = useSpring(
     useTransform(scrollYProgress, [0, 1], [0, 1000]),
@@ -36,13 +36,13 @@ export const HeroParallax = ({ products = gallery }) => {
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
+    useTransform(scrollYProgress, [0, 0.2], [-300, 100]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className="h-[270vh] pt-24  overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gray-100 dark:bg-gray-900"
+      className="h-[200vh] pt-24 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gray-100 dark:bg-gray-900"
     >
       <Header />
       <motion.div
@@ -88,9 +88,9 @@ export const HeroParallax = ({ products = gallery }) => {
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        Des images de votre <br />
+    <div className="max-w-7xl relative mx-auto py-12 md:py-24 px-6 w-full left-0 top-0">
+      <h1 className="text-3xl md:text-8xl font-bold dark:text-white">
+        Galerie de votre <br />
         clinique vétérinaire
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
@@ -111,7 +111,7 @@ export const ProductCard = ({ product, translate }) => {
         y: -20
       }}
       key={product.title}
-      className="group/product h-96 w-96 relative flex-shrink-0  shadow-lg shadow-primary/20"
+      className="group/product h-80 w-80 relative flex-shrink-0  hover:shadow-lg hover:shadow-primary/20"
     >
       <Image
         src={product.thumbnail}
