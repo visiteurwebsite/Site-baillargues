@@ -13,9 +13,10 @@ import {
 } from '@nextui-org/react';
 import React from 'react';
 import { navLinks } from '../../../../constant/navlink';
+import { NavbarModalUrgencyLogic } from '../logic/NavbarModalUrgencyLogic';
 import { ThemeSwitcherLogic } from '../logic/ThemeSwitcherLogic';
 
-export default function VetNavbar({ mounted }) {
+export default function VetNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
@@ -50,9 +51,19 @@ export default function VetNavbar({ mounted }) {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button color="primary" href="#" variant="flat" className="uppercase">
-            Urgence
-          </Button>
+          <NavbarModalUrgencyLogic>
+            {(openModal) => (
+              <Button
+                onClick={openModal}
+                color="primary"
+                href="#"
+                variant="flat"
+                className="uppercase"
+              >
+                Urgence
+              </Button>
+            )}
+          </NavbarModalUrgencyLogic>
         </NavbarItem>
         <NavbarItem>
           <ThemeSwitcherLogic />
