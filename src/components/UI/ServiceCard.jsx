@@ -1,8 +1,11 @@
 import Image from 'next/image';
 
-export function ServiceCard({ title, description, image }) {
+export function ServiceCard({ title, description, image, onClick }) {
   return (
-    <div className="bg-gray-800/50 py-6 lg:py-4 gap-4 grid grid-cols-1 place-items-center text-center rounded-md shadow-md hover:shadow-lg hover:shadow-primary-300/30  transition-all duration-300 shadow-white/30 border-2 border-white/30 hover:border-primary-300/30 ">
+    <div
+      className="bg-gray-800/50 py-6 lg:py-4 gap-4 grid grid-cols-1 place-items-center text-center rounded-md shadow-md hover:shadow-lg hover:shadow-primary-300/30 transition-all duration-300 shadow-white/30 border-2 border-white/30 hover:border-primary-300/30 cursor-pointer"
+      onClick={onClick}
+    >
       <Image
         src={image}
         alt={title}

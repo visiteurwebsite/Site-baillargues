@@ -38,7 +38,7 @@ export const HeroParallax = ({ products = gallery }) => {
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-300, 100]),
     springConfig
-  );
+  ); // expôrt un tableau ou objet .nomdel'objet.la methode
   return (
     <div
       ref={ref}
