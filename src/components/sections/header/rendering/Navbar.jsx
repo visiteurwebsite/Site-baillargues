@@ -24,20 +24,20 @@ export default function VetNavbar() {
       onMenuOpenChange={setIsMenuOpen}
       isBordered
       shouldHideOnScroll
-      className="border-primary-300/50 border-b-2"
+      className="border-b-2 border-primary-300/50"
     >
-      <NavbarContent>
+      <NavbarContent className="gap-4">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           className="md:hidden"
         />
-        <NavbarBrand>
-          <p className="font-bold uppercase text-sm sm:text-base">
+        <NavbarBrand className="pr-24 md:pr-28 lg:pr-32">
+          <p className="text-sm font-bold uppercase sm:text-base">
             Clinique de Baillargues
           </p>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden md:flex gap-6" justify="center">
+      <NavbarContent className="hidden gap-4 md:flex" justify="center">
         {navLinks.map((link, index) => (
           <NavbarItem key={index}>
             <Link
@@ -49,7 +49,7 @@ export default function VetNavbar() {
           </NavbarItem>
         ))}
       </NavbarContent>
-      <NavbarContent justify="end">
+      <NavbarContent className="gap-4" justify="end">
         <NavbarItem>
           <NavbarModalUrgencyLogic>
             {(openModal) => (

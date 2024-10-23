@@ -7,7 +7,6 @@ export function Teams() {
   return (
     <>
       <SwiperTeams />
-
       <HeroParallax />
     </>
   );

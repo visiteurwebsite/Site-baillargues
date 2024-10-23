@@ -4,14 +4,14 @@ import { Map } from '../../../UI/Map';
 import { Reviews } from './Reviews';
 export function Contact() {
   return (
-    <section id="contact" className="py-16 bg-gray-100 dark:bg-gray-900">
+    <section id="contact" className="bg-gray-100 py-16 dark:bg-gray-900">
       <div className="container mx-auto pb-16">
-        <h2 className="text-2xl font-bold mb-8 md:text-4xl text-center pb-16">
+        <h2 className="mb-8 pb-16 text-center text-2xl font-bold md:text-4xl">
           Contactez-nous
         </h2>
         <div className="flex">
-          <div className="flex flex-col text-left w-1/3 gap-2">
-            <h2 className="text-2xl font-bold mb-8 md:text-4xl">
+          <div className="flex w-1/3 flex-col gap-2 text-left">
+            <h2 className="mb-8 text-2xl font-bold md:text-4xl">
               Nos horaires d&apos;ouverture
             </h2>
             <h3 className="text-xl font-bold">Lundi - Vendredi</h3>
@@ -23,12 +23,12 @@ export function Contact() {
             <h3 className="text-xl font-bold">Sur rendez-vous</h3>
             <p className="uppercase">Clinique vétérinaire de Baillargues</p>
             <div className="flex flex-col">
-              <a className="flex gap-2 items-center" href="tel:+33666666666">
+              <a className="flex items-center gap-2" href="tel:+33666666666">
                 <IoIosPhonePortrait />
                 <p>06 66 66 66 66</p>
               </a>
               <a
-                className="flex gap-2 items-center"
+                className="flex items-center gap-2"
                 href="mailto:contact@gmail.com"
               >
                 <AiTwotoneMail />
