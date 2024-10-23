@@ -1,11 +1,12 @@
 import {
+  Button,
   Modal,
-  ModalContent,
-  ModalHeader,
   ModalBody,
+  ModalContent,
   ModalFooter,
-  Button
+  ModalHeader
 } from '@nextui-org/react';
+import Image from 'next/image';
 
 export function ServiceModal({ isOpen, onClose, service }) {
   if (!service) {
@@ -14,10 +15,17 @@ export function ServiceModal({ isOpen, onClose, service }) {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <ModalContent>
+      <ModalContent className="">
+        <Image
+          src={service.backgroundImage}
+          alt={service.title}
+          width={1000}
+          height={1000}
+          className="absolute -z-10 size-full object-cover opacity-20"
+        />
         <ModalHeader>{service.title}</ModalHeader>
         <ModalBody>
-          <p>{service.description}</p>
+          <p>{service.modalDescription}</p>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onPress={onClose}>
