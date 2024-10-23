@@ -1,3 +1,10 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next", "next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "plugins": ["tailwindcss"],
+  "rules": {},
+  "settings": {
+    "tailwindcss": {
+      "callees": ["classnames", "clsx", "ctl"]
+    }
+  }
 }
