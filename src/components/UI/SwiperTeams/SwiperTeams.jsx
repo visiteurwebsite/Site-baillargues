@@ -1,3 +1,4 @@
+/* eslint-disable tailwindcss/no-custom-classname */
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
@@ -7,15 +8,15 @@ import './style.css';
 export function SwiperTeams() {
   return (
     <section
-      className="flex flex-col justify-center items-center h-screen w-full bg-gray-100 dark:bg-gray-900 overflow-hidden gap-12 pt-16"
+      className="flex h-screen w-full flex-col items-center justify-center  gap-12 overflow-hidden lg:gap-8"
       id="about"
     >
-      <div className="flex flex-col justify-left items-start w-full px-4 md:px-12 gap-4">
-        <h2 className="text-2xl font-bold text-center md:text-6xl">
+      <div className="container mx-auto flex flex-col items-start gap-4 text-left lg:pt-10">
+        <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
           Notre équipe
-        </h2>
-        <span className="w-[23.5rem] h-[2px] bg-primary"></span>
-        <p className="">
+        </span>
+
+        <p className="text-xl">
           Découvrez les profils de notre équipe de vétérinaires et assistants
         </p>
       </div>

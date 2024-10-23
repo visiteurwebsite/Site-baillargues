@@ -38,11 +38,11 @@ export const HeroParallax = ({ products = gallery }) => {
   const translateY = useSpring(
     useTransform(scrollYProgress, [0, 0.2], [-300, 100]),
     springConfig
-  ); // expôrt un tableau ou objet .nomdel'objet.la methode
+  );
   return (
     <div
       ref={ref}
-      className="h-[200vh] pt-24 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d] bg-gray-100 dark:bg-gray-900"
+      className="relative flex h-[150vh] flex-col self-auto overflow-hidden bg-gray-100 antialiased [perspective:1000px] [transform-style:preserve-3d] dark:bg-gray-900 lg:h-[180vh]"
     >
       <Header />
       <motion.div
@@ -54,7 +54,7 @@ export const HeroParallax = ({ products = gallery }) => {
         }}
         className=""
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="mb-20 flex flex-row-reverse space-x-20 space-x-reverse">
           {firstRow.map((gallery) => (
             <ProductCard
               product={gallery}
@@ -63,7 +63,7 @@ export const HeroParallax = ({ products = gallery }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="mb-20 flex  flex-row space-x-20 ">
           {secondRow.map((gallery) => (
             <ProductCard
               product={gallery}
@@ -72,7 +72,7 @@ export const HeroParallax = ({ products = gallery }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
+        <motion.div className="flex flex-row-reverse space-x-20 space-x-reverse">
           {thirdRow.map((gallery) => (
             <ProductCard
               product={gallery}
@@ -88,12 +88,12 @@ export const HeroParallax = ({ products = gallery }) => {
 
 export const Header = () => {
   return (
-    <div className="max-w-7xl relative mx-auto py-12 md:py-24 px-6 w-full left-0 top-0">
-      <h1 className="text-3xl md:text-8xl font-bold dark:text-white">
+    <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-6 py-12 md:py-24">
+      <h2 className="text-2xl font-bold dark:text-white lg:text-6xl">
         Galerie de votre <br />
         clinique vétérinaire
-      </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+      </h2>
+      <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
         Votre clinique vétérinaire est unique, et vos images doivent refléter
         cette singularité.
       </p>
@@ -107,24 +107,15 @@ export const ProductCard = ({ product, translate }) => {
       style={{
         x: translate
       }}
-      whileHover={{
-        y: -20
-      }}
-      key={product.title}
-      className="group/product h-80 w-80 relative flex-shrink-0  hover:shadow-lg hover:shadow-primary/20"
+      className="group/product relative size-80 shrink-0"
     >
       <Image
         src={product.thumbnail}
         height="300"
         width="300"
-        className="object-cover object-left-top absolute h-full w-full inset-0"
+        className="absolute inset-0 size-full object-cover object-left-top"
         alt={product.title}
       />
-
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">
-        {product.title}
-      </h2>
     </motion.div>
   );
 };
