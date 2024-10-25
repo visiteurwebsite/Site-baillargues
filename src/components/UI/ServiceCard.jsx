@@ -3,7 +3,7 @@ import Image from 'next/image';
 export function ServiceCard({ title, description, image, onClick }) {
   return (
     <div
-      className="grid cursor-pointer grid-cols-1 place-items-center gap-4 rounded-md border-2 border-white/30 bg-gray-800/50 py-6 text-center shadow-md shadow-white/30 transition-all duration-300 hover:border-primary-300/30 hover:shadow-lg hover:shadow-primary-300/30 lg:py-4"
+      className="grid h-full cursor-pointer grid-cols-1 place-items-center gap-4 rounded-md border-2 border-primary/30 bg-primary/30 py-6 text-center shadow-md shadow-primary/20 transition-all duration-300 hover:border-secondary/30 hover:bg-secondary/30 hover:shadow-lg hover:shadow-secondary/40 lg:py-4"
       onClick={onClick}
     >
       <Image

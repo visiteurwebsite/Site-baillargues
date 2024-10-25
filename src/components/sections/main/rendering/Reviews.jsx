@@ -6,7 +6,7 @@ import { dataReviews } from '../../../../data/reviews';
 
 function ReviewCard({ review }) {
   return (
-    <div className="flex flex-col justify-between p-4 bg-white dark:bg-gray-800/50 shadow-md rounded-lg w-[30rem] h-[14rem] select-none hover:bg-gray-200 dark:hover:bg-gray-800/80 hover:shadow-primary/20 transition-colors duration-300">
+    <div className="flex h-56 w-[30rem] select-none flex-col justify-between rounded-lg border-2 border-primary/30 bg-primary/30 bg-white p-4 py-6 text-center shadow-md shadow-primary/20 transition-all duration-300 hover:border-secondary/30 hover:bg-secondary/30 hover:shadow-lg hover:shadow-secondary/40 ">
       <div className="flex items-center gap-2 pb-4">
         <Image
           src={review.googleImage}
@@ -17,7 +17,7 @@ function ReviewCard({ review }) {
         <h3 className="font-bold ">{review.name}</h3>
       </div>
       <p className="text-sm">{review.reviewDescription}</p>
-      <div className="flex gap-4 mt-auto">
+      <div className="mt-auto flex gap-4">
         <div>{review.scoreReview}</div>
         <p className="text-sm text-gray-500">{review.timeReview}</p>
       </div>
@@ -51,7 +51,7 @@ export function Reviews() {
           style={{ transform: `translateX(-${scrollPosition}px)` }}
         >
           {reviews.map((review, index) => (
-            <div key={index} className="flex-shrink-0 w-[30rem]">
+            <div key={index} className="w-[30rem] shrink-0">
               <ReviewCard review={review} />
             </div>
           ))}

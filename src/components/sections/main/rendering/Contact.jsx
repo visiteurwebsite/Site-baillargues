@@ -4,7 +4,7 @@ import { Map } from '../../../UI/Map';
 import { Reviews } from './Reviews';
 export function Contact() {
   return (
-    <section id="contact" className="bg-gray-100 py-16 dark:bg-gray-900">
+    <section id="contact" className=" py-16">
       <div className="container mx-auto pb-16">
         <h2 className="mb-8 pb-16 text-center text-2xl font-bold md:text-4xl">
           Contactez-nous

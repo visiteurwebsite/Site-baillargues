@@ -7,7 +7,7 @@ export function Hero() {
       className="bg-equipe flex h-screen items-center justify-center bg-cover bg-right-top lg:bg-top"
     >
       <div className="relative flex w-3/4 items-center justify-center sm:w-1/2 lg:w-full">
-        <div className="absolute inset-y-0 size-full rounded-xl bg-zinc-900/40 backdrop-blur-md lg:w-1/2"></div>
+        <div className="absolute inset-y-0 size-full rounded-xl  backdrop-blur-md lg:w-1/2"></div>
         <div className="relative flex flex-col items-center gap-2  rounded-xl border-b-2 border-primary p-4 text-center sm:gap-4 sm:p-6 lg:w-2/4 lg:flex-row lg:gap-6">
           <Image
             src="/logo.png"
