@@ -11,7 +11,7 @@ export function SwiperTeams() {
       className="flex h-screen w-full flex-col items-center justify-center  gap-12 overflow-hidden lg:gap-8"
       id="about"
     >
-      <div className="container mx-auto flex flex-col items-start gap-4 text-left lg:pt-10">
+      <div className="container mx-auto flex flex-col items-center justify-center gap-4 text-center lg:pt-10">
         <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
           Notre équipe
         </span>

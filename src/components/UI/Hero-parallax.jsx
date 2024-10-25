@@ -88,12 +88,12 @@ export const HeroParallax = ({ products = gallery }) => {
 
 export const Header = () => {
   return (
-    <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-6 py-12 md:py-24">
-      <h2 className="text-2xl font-bold dark:text-white lg:text-6xl">
+    <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-6 py-12 text-center md:py-24">
+      <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
         Galerie de votre <br />
         clinique vétérinaire
-      </h2>
-      <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
+      </span>
+      <p className="mx-auto mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
         Votre clinique vétérinaire est unique, et vos images doivent refléter
         cette singularité.
       </p>
@@ -107,12 +107,12 @@ export const ProductCard = ({ product, translate }) => {
       style={{
         x: translate
       }}
-      className="group/product relative size-80 shrink-0"
+      className="group/product relative size-80 shrink-0 lg:size-96"
     >
       <Image
         src={product.thumbnail}
-        height="300"
-        width="300"
+        height="1000"
+        width="1000"
         className="absolute inset-0 size-full object-cover object-left-top"
         alt={product.title}
       />
