@@ -9,14 +9,14 @@ import './style.css';
 export function SwiperTeams() {
   return (
     <section
-      className="flex h-screen w-full flex-col items-center justify-center  overflow-hidden "
+      className="flex size-full flex-col items-center justify-center overflow-hidden md:h-screen "
       id="about"
     >
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        className="container mx-auto flex flex-col items-center justify-center gap-4 text-center lg:py-16"
+        className="container mx-auto flex flex-col items-center justify-center gap-4 py-16 text-center"
       >
         <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
           Notre équipe
@@ -26,12 +26,7 @@ export function SwiperTeams() {
           Découvrez les profils de notre équipe de vétérinaires et assistants
         </p>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.3 }}
-        className="w-full pb-20"
-      >
+      <div className="w-full lg:pb-20">
         <Swiper
           modules={[Pagination, Autoplay]}
           loop={true}
@@ -62,7 +57,7 @@ export function SwiperTeams() {
           }}
         >
           {teams.map((team, index) => (
-            <SwiperSlide key={index} className={`swiper-slide slide-${index}`}>
+            <SwiperSlide key={index} className={`swiper-slide  slide-${index}`}>
               <div className="title">
                 <h2>{team.name}</h2>
                 <p className="text-xl font-bold">{team.role}</p>
@@ -81,7 +76,7 @@ export function SwiperTeams() {
           ))}
           <div className="swiper-pagination"></div>
         </Swiper>
-      </motion.div>
+      </div>
     </section>
   );
 }

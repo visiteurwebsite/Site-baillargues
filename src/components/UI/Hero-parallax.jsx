@@ -42,7 +42,7 @@ export const HeroParallax = ({ products = gallery }) => {
   return (
     <div
       ref={ref}
-      className="relative flex h-[150vh] flex-col self-auto overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d] lg:h-[180vh]"
+      className="relative flex h-[160vh] flex-col self-auto overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d] md:h-[150vh] lg:h-[200vh]"
     >
       <Header />
       <motion.div
@@ -92,7 +92,7 @@ export const Header = () => {
       initial={{ opacity: 0, y: -50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.3 }}
-      className="relative left-0 top-0 mx-auto w-full max-w-7xl px-6 py-12 text-center md:py-24"
+      className="relative left-0 top-0 mx-auto w-full max-w-7xl px-6 py-24 text-center"
     >
       <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
         Galerie de votre <br />
@@ -112,7 +112,7 @@ export const ProductCard = ({ product, translate }) => {
       style={{
         x: translate
       }}
-      className="group/product relative size-80 shrink-0 lg:size-96"
+      className="group/product relative size-52 shrink-0 md:size-80 lg:size-96"
     >
       <Image
         src={product.thumbnail}

@@ -10,7 +10,7 @@ export function Services() {
     ServiceModalLogic();
 
   return (
-    <section id="services" className=" px-12 py-10 lg:h-screen lg:px-0">
+    <section id="services" className="px-12 py-10 lg:h-screen lg:px-24">
       <div className="container mx-auto flex flex-col items-center justify-center gap-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -21,17 +21,11 @@ export function Services() {
           <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
             Nos Services
           </span>
-          <p className="mb-10 text-center text-xl md:mb-20">
-            Découvrez les services que nous offrons à votre animal de compagnie
-            <br /> pour lui assurer une vie saine et heureuse.
+          <p className="mb-20 text-center text-xl ">
+            Découvrez les services que nous offrons à votre animal de compagnie.
           </p>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, x: -200, scale: 0.8 }}
-          whileInView={{ opacity: 1, x: 0, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-4"
-        >
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-4">
           {servicesData.map((service, index) => (
             <motion.div
               key={service.id}
@@ -48,7 +42,7 @@ export function Services() {
               />
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
       <ServiceModal
         isOpen={isOpen}

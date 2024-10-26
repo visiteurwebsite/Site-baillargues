@@ -6,7 +6,7 @@ import { dataReviews } from '../../../../data/reviews';
 
 function ReviewCard({ review }) {
   return (
-    <div className="flex h-56 w-[30rem] select-none flex-col justify-between rounded-lg border-2 border-primary/30 bg-primary/30 bg-white p-4 py-6 text-center shadow-md shadow-primary/20 transition-all duration-300 hover:border-secondary/30 hover:bg-secondary/30 hover:shadow-lg hover:shadow-secondary/40 ">
+    <div className="flex h-56 w-[30rem] select-none flex-col justify-between rounded-lg border-2 border-primary/30 bg-primary/30 p-4 py-6 text-center shadow-md shadow-primary/20 transition-all duration-300 hover:border-secondary/30 hover:bg-secondary/30 hover:shadow-lg hover:shadow-secondary/40 ">
       <div className="flex items-center gap-2 pb-4">
         <Image
           src={review.googleImage}

@@ -33,8 +33,8 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="h-screen lg:pt-16">
-      <div className="container mx-auto flex h-full flex-col items-center justify-center gap-24 text-center">
+    <section id="about" className="h-full pt-16 md:h-screen">
+      <div className="container mx-auto flex flex-col items-center justify-center gap-4 text-center md:gap-12 lg:h-full lg:gap-24">
         <motion.div
           initial={{ opacity: 0, y: -75 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,7 +44,7 @@ export const About = () => {
           <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-6">
             À propos de nous
           </span>
-          <p className="mx-auto w-1/3 pt-6 text-center text-xl">
+          <p className="mx-auto pt-2 text-center text-xl md:pt-4 lg:pt-6">
             Bienvenue à la Clinique Vétérinaire de Baillargues, où la santé et
             le bien-être de vos animaux sont notre priorité.
           </p>
@@ -53,10 +53,11 @@ export const About = () => {
           initial={{ opacity: 0, x: -200, scale: 0.8 }}
           whileInView={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2"
+          className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:w-4/6 lg:grid-cols-2"
         >
           {cardItems.map((item, index) => (
             <motion.div
+              className="mx-auto flex w-4/5 justify-center md:w-full"
               key={item.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}

@@ -20,24 +20,20 @@ module.exports = {
       themes: {
         light: {
           colors: {
-            background: '#e7f7f9',
-            textColor: '#071113', // Mise à jour de la couleur du texte
-            primary: '#146b7b',
-            secondary: '#6ddff3',
-            accent: '#05c0e1' // Ajout de la couleur accentuée
-
-            // Ajoutez d'autres couleurs si nécessaire
+            background: '#f5faf6',
+            textColor: '#080c08',
+            primary: '#52b661',
+            secondary: '#9ddea7',
+            accent: '#70da81'
           }
         },
         dark: {
           colors: {
-            background: '#061618',
-            textColor: '#ecf6f8', // Mise à jour de la couleur du texte
-            primary: '#84dceb',
-            secondary: '#0c7e92',
-            accent: '#1ed9fa' // Ajout de la couleur accentuée
-
-            // Ajoutez d'autres couleurs si nécessaire
+            background: '#15242b',
+            textColor: '#ebeff1',
+            primary: '#126f99',
+            secondary: '#3dbad7',
+            accent: '#2dbeff'
           }
         }
       }

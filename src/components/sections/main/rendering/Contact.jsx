@@ -5,6 +5,10 @@ import { Reviews } from './Reviews';
 export function Contact() {
   return (
     <section id="contact" className=" py-16">
+      <h2 className="inline-block border-b-2 text-center text-2xl font-bold md:text-4xl">
+        Testimonials
+      </h2>
+      <Reviews />
       <div className="container mx-auto pb-16">
         <h2 className="mb-8 pb-16 text-center text-2xl font-bold md:text-4xl">
           Contactez-nous
@@ -41,7 +45,6 @@ export function Contact() {
           </div>
         </div>
       </div>
-      <Reviews />
     </section>
   );
 }

@@ -4,12 +4,12 @@ import { FaArrowDown } from 'react-icons/fa';
 const ArrowDown = ({ size, color }) => {
   const handleClick = (e) => {
     e.preventDefault();
-    const servicesSection = document.getElementById('services');
-    servicesSection.scrollIntoView({ behavior: 'smooth' });
+    const aboutSection = document.getElementById('about');
+    aboutSection.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <a href="#services" onClick={handleClick}>
+    <a href="#about" onClick={handleClick}>
       <FaArrowDown size={size} color={color} className="animate-bounce" />
     </a>
   );
@@ -23,7 +23,7 @@ const MoonToggle = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6"
+      className="size-6"
     >
       <path
         strokeLinecap="round"
@@ -42,7 +42,7 @@ const SunToggle = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-6 h-6"
+      className="size-6"
     >
       <path
         strokeLinecap="round"
