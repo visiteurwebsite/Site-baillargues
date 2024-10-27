@@ -42,7 +42,7 @@ export const HeroParallax = ({ products = gallery }) => {
   return (
     <div
       ref={ref}
-      className="relative flex h-[160vh] flex-col self-auto overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d] md:h-[150vh] lg:h-[200vh]"
+      className="relative flex h-[168vh] flex-col self-auto overflow-hidden antialiased [perspective:1000px] [transform-style:preserve-3d] md:h-[150vh] lg:h-[200vh]"
     >
       <Header />
       <motion.div

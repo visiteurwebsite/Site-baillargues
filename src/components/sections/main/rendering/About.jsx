@@ -7,33 +7,33 @@ export const About = () => {
       title: 'Écoute',
       description:
         "Nous mettons un point d'honneur à écouter et à comprendre les besoins de chaque animal et de leur propriétaire.",
-      icon: '/ecoute.svg'
+      icon: '/ecoute.png'
     },
     {
       id: 2,
-      title: 'Collaboration',
+      title: 'Conseils',
       description:
-        "Notré équipe de vétérinaire et d'assistant travail en étroite collaboration pour vous offrir des soins complets et adaptés. Chaque vétérinaire est spécialisé dans un domaine différent pour vous garantir des soins de qualité.",
-      icon: '/collaboration.svg'
+        "Notre équipe de vétérinaire et d'assistant vous propose des conseils personnalisés pour la santé de votre animal.",
+      icon: '/advice.png'
     },
     {
       id: 3,
       title: 'Technologie',
       description:
         'Nous utilisons des technologies modernes pour vous offrir des soins personnalisés et adaptés à chaque animal.',
-      icon: '/technologie.svg'
+      icon: '/technologie.png'
     },
     {
       id: 4,
-      title: 'Complémentarité',
+      title: 'Attention',
       description:
-        'Chaque vétérinaire de notre équipe possède une spécialité unique, formant ainsi une équipe complémentaire pour assurer un rétablissement efficace de votre animal.',
-      icon: '/complementaire.svg'
+        'Ici nous portons une attention particulière à tout nos petits patients.',
+      icon: '/attention.png'
     }
   ];
 
   return (
-    <section id="about" className="h-full pt-16 md:h-screen">
+    <section id="about" className="h-full pt-16 md:h-screen ">
       <div className="container mx-auto flex flex-col items-center justify-center gap-4 text-center md:gap-12 lg:h-full lg:gap-24">
         <motion.div
           initial={{ opacity: 0, y: -75 }}

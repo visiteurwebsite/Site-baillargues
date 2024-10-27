@@ -20,20 +20,20 @@ module.exports = {
       themes: {
         light: {
           colors: {
-            background: '#f5faf6',
-            textColor: '#080c08',
-            primary: '#52b661',
-            secondary: '#9ddea7',
-            accent: '#70da81'
+            background: '#fcf9f8',
+            textColor: '#060b0f',
+            primary: '#2c7fd8',
+            secondary: '#7ab3f0',
+            accent: '#4099f7'
           }
         },
         dark: {
           colors: {
-            background: '#15242b',
-            textColor: '#ebeff1',
-            primary: '#126f99',
-            secondary: '#3dbad7',
-            accent: '#2dbeff'
+            background: '#04070b',
+            textColor: '#f0f5f9',
+            primary: '#0f4885',
+            secondary: '#277ad3',
+            accent: '#4099f7'
           }
         }
       }

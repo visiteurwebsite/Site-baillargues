@@ -43,7 +43,7 @@ export default function VetNavbar() {
       <NavbarContent className="hidden md:flex md:gap-4" justify="center">
         {navLinks.map((link, index) => (
           <NavbarItem key={index}>
-            <Link href={link.href} className="text-white hover:text-primary">
+            <Link href={link.href} className="text-textColor hover:text-accent">
               {link.name}
             </Link>
           </NavbarItem>

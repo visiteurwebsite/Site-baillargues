@@ -35,7 +35,7 @@ export function Map() {
   return (
     <div
       ref={mapRef}
-      className="w-full h-full rounded-xl border-b-3 border-primary shadow-xl shadow-primary/20"
+      className="h-[40rem] w-full border-b-2 border-primary shadow-xl shadow-primary/10 lg:rounded-xl"
     />
   );
 }

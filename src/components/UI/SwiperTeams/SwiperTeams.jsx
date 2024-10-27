@@ -9,7 +9,7 @@ import './style.css';
 export function SwiperTeams() {
   return (
     <section
-      className="flex size-full flex-col items-center justify-center overflow-hidden md:h-screen "
+      className="flex size-full flex-col items-center justify-center overflow-hidden bg-cover md:h-screen"
       id="about"
     >
       <motion.div

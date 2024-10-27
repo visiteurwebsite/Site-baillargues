@@ -42,10 +42,10 @@ export function Hero() {
             </>
           ) : (
             <>
-              <h1 className="text-center text-2xl font-bold">
+              <h1 className="text-center text-2xl font-bold text-white">
                 Clinique vétérinaire de Baillargues
               </h1>
-              <p className="text-center text-lg">
+              <p className="text-center text-lg text-white">
                 Des soins vétérinaires personnalisés pour votre animal de
                 compagnie
               </p>
