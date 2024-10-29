@@ -11,18 +11,48 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle
 } from '@nextui-org/react';
-import React from 'react';
+import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { navLinks } from '../../../../constant/navlink';
 import { NavbarModalUrgencyLogic } from '../logic/NavbarModalUrgencyLogic';
 import { ThemeSwitcherLogic } from '../logic/ThemeSwitcherLogic';
 
 export default function VetNavbar() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 468px)' });
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const sections = document.querySelectorAll('section');
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
     <Navbar
       onMenuOpenChange={setIsMenuOpen}
+      isMenuOpen={isMenuOpen}
       isBordered
       shouldHideOnScroll
       className="border-b-2 border-primary"
@@ -43,7 +73,12 @@ export default function VetNavbar() {
       <NavbarContent className="hidden md:flex md:gap-4" justify="center">
         {navLinks.map((link, index) => (
           <NavbarItem key={index}>
-            <Link href={link.href} className="text-textColor hover:text-accent">
+            <Link
+              href={link.href}
+              className={`text-textColor hover:text-accent ${
+                activeSection === link.href.substring(1) ? 'text-primary' : ''
+              }`}
+            >
               {link.name}
             </Link>
           </NavbarItem>
@@ -68,10 +103,19 @@ export default function VetNavbar() {
           <ThemeSwitcherLogic />
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarMenu className="flex flex-col items-center justify-center pb-24">
         {navLinks.map((link, index) => (
-          <NavbarMenuItem key={index}>
-            <Link href={link.href} className="w-full" size="lg">
+          <NavbarMenuItem className="h-8 justify-center pb-12" key={index}>
+            <Link
+              href={link.href}
+              onClick={() => setIsMenuOpen(false)}
+              className={`w-full uppercase ${
+                activeSection === link.href.substring(1)
+                  ? 'text-accent'
+                  : 'text-white'
+              }`}
+              size="lg"
+            >
               {link.name}
             </Link>
           </NavbarMenuItem>

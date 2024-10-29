@@ -63,7 +63,7 @@ export function Reviews() {
   const reviews = [...dataReviews, ...dataReviews]; // Doubler le tableau pour un défilement fluide
 
   return (
-    <section className="overflow-hidden" ref={containerRef}>
+    <div className="overflow-hidden" ref={containerRef}>
       <div className="container mx-auto pb-20 lg:py-28">
         <div
           className="flex gap-6 transition-transform duration-1000 ease-linear"
@@ -76,6 +76,6 @@ export function Reviews() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
