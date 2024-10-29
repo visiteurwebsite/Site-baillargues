@@ -14,11 +14,11 @@ export function Footer() {
   const isMobile = useMediaQuery({ query: '(max-width: 468px)' });
 
   return (
-    <footer className="flex flex-col items-center justify-center border-t-2 border-primary/30 bg-primary/40 py-4">
-      <div className="container mx-auto flex  justify-center gap-8 px-2 lg:gap-48">
+    <footer className="flex flex-col items-center border-t-2 border-primary/30 bg-primary/40 py-4">
+      <div className="container mx-auto flex flex-col gap-8 px-2 lg:flex-row lg:gap-48">
         <nav className="">
-          <ul className="flex flex-col items-center justify-center">
-            <h2 className="pb-4 text-center text-lg font-bold">Menu</h2>
+          <ul className="mx-auto flex flex-col text-center">
+            <h2 className="pb-4 text-lg font-bold">Liens rapides</h2>
             {navLinks.map((link) => (
               <Link
                 className="text-sm hover:text-primary md:text-base"
@@ -30,8 +30,10 @@ export function Footer() {
             ))}
           </ul>
         </nav>
-        <div className="flex flex-col items-center  text-sm md:text-base">
-          <h3 className="pb-4 text-center font-bold lg:text-left">Contact</h3>
+        <div className="container mx-auto flex w-1/2 flex-col items-center  text-sm md:text-base">
+          <h3 className="pb-4 text-left text-lg font-bold lg:text-left">
+            Contact
+          </h3>
           <div className="flex flex-col">
             <a
               className="flex gap-2 text-sm md:text-base"
@@ -41,9 +43,9 @@ export function Footer() {
               <p>06 66 66 66 66</p>
             </a>
           </div>
-          <div className="flex  gap-2">
+          <div className="flex gap-2">
             <TiLocation />
-            <p className="text-center">
+            <p className="md:text-center">
               impasse charles fournier
               <br />
               34560 Baillargues
