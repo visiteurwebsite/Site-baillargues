@@ -1,4 +1,5 @@
 const { nextui } = require('@nextui-org/react');
+const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,6 +12,9 @@ module.exports = {
     extend: {
       borderRadius: {
         ImageRadius: '20% 6px 20% 6px'
+      },
+      colors: {
+        secondary: '#7ab3f0'
       }
     }
   },
@@ -37,6 +41,14 @@ module.exports = {
           }
         }
       }
+    }),
+    plugin(function ({ addBase, theme }) {
+      addBase({
+        ':root': {
+          '--tw-color-secondary': theme('colors.secondary'),
+          '--tw-color-primary': theme('colors.primary')
+        }
+      });
     })
   ]
 };
