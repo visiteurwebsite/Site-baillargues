@@ -1,41 +1,14 @@
-'use client';
-
-import { Loader } from '@googlemaps/js-api-loader';
-import { useEffect, useRef } from 'react';
-
 export function Map() {
-  const mapRef = useRef(null);
-
-  useEffect(() => {
-    const InitMap = async () => {
-      const loader = new Loader({
-        apiKey: process.env.NEXT_PUBLIC_MAPS_API_KEY,
-        version: 'weekly',
-        libraries: ['places']
-      });
-      const { Map } = await loader.importLibrary('maps');
-
-      const position = {
-        lat: 48.8584,
-        lng: 2.2945
-      };
-
-      // MAP OPTIONS
-      const mapOptions = {
-        center: position,
-        zoom: 17,
-        mapId: 'Clinique-Veterinaire-Baillargues'
-      };
-
-      // INIT MAP
-      const map = new Map(mapRef.current, mapOptions);
-    };
-    InitMap();
-  }, []);
   return (
-    <div
-      ref={mapRef}
-      className="h-[40rem] w-full border-b-2 border-primary shadow-xl shadow-primary/10 lg:rounded-xl"
-    />
+    <div className="mb-12 size-full h-80 rounded-xl shadow-xl shadow-primary/40 lg:mb-0 lg:h-[27rem]">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.713332838962!2d3.9968291766690864!3d43.65413225236983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6a14535361d77%3A0x6476740819fed197!2sCLINIQUE%20VETERINAIRE%20DE%20BAILLARGUES!5e0!3m2!1sfr!2sfr!4v1730195888985!5m2!1sfr!2sfr"
+        width="100%"
+        height="100%"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        className="rounded-xl border-b-2 border-primary"
+      ></iframe>
+    </div>
   );
 }

@@ -27,7 +27,7 @@ export function Contact() {
         <h2 className="mb-8 pb-4 text-center text-2xl font-bold md:text-4xl lg:pb-16">
           Contactez-nous
         </h2>
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:h-[30rem] lg:flex-row">
           <div className="flex flex-col gap-2 text-center lg:w-1/3 lg:pb-16 lg:text-left">
             <h2 className="mb-8 text-2xl font-bold md:text-4xl">
               Nos horaires d&apos;ouverture
@@ -51,11 +51,11 @@ export function Contact() {
                 <p>06 66 66 66 66</p>
               </a>
               <a
-                className="flex items-center justify-center gap-2 lg:justify-start"
+                className="flex items-center justify-center gap-2 pb-6 lg:justify-start"
                 href="mailto:contact@gmail.com"
               >
                 <AiTwotoneMail />
-                <p>contact@gmail.com</p>
+                <p className="">contact@gmail.com</p>
               </a>
             </div>
           </div>
