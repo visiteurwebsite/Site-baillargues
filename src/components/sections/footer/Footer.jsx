@@ -15,7 +15,7 @@ export function Footer() {
 
   return (
     <footer className="flex flex-col items-center border-t-2 border-primary/30 bg-primary/40 py-4">
-      <div className="container mx-auto flex flex-col gap-8 px-2 lg:flex-row lg:gap-48">
+      <div className="container mx-auto flex flex-col gap-8 lg:flex-row lg:gap-48 lg:px-16">
         <nav className="">
           <ul className="mx-auto flex flex-col text-center">
             <h2 className="pb-4 text-lg font-bold">Liens rapides</h2>
@@ -30,8 +30,8 @@ export function Footer() {
             ))}
           </ul>
         </nav>
-        <div className="container mx-auto flex w-1/2 flex-col items-center  text-sm md:text-base">
-          <h3 className="pb-4 text-left text-lg font-bold lg:text-left">
+        <div className="flex flex-1 flex-col items-center text-sm lg:w-1/3">
+          <h3 className="pb-4 text-left text-lg font-bold lg:text-center">
             Contact
           </h3>
           <div className="flex flex-col">
