@@ -112,7 +112,7 @@ export default function VetNavbar() {
               className={`w-full uppercase ${
                 activeSection === link.href.substring(1)
                   ? 'text-accent'
-                  : 'text-white'
+                  : 'text-textColor'
               }`}
               size="lg"
             >
