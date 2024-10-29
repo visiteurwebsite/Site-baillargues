@@ -29,7 +29,11 @@ function ReviewCard({ review }) {
 export function Reviews() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [cardWidth, setCardWidth] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef(null);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -50,27 +54,61 @@ export function Reviews() {
   const totalWidth = dataReviews.length * cardWidth;
 
   useEffect(() => {
-    const scrollInterval = setInterval(() => {
-      setScrollPosition((prevPosition) => {
-        const newPosition = prevPosition + 1;
-        return newPosition >= totalWidth ? 0 : newPosition;
-      });
-    }, 50);
+    if (!isHovered && !isDragging) {
+      const scrollInterval = setInterval(() => {
+        setScrollPosition((prevPosition) => {
+          const newPosition = prevPosition + 1;
+          return newPosition >= totalWidth ? 0 : newPosition;
+        });
+      }, 50);
 
-    return () => clearInterval(scrollInterval);
-  }, [totalWidth]);
+      return () => clearInterval(scrollInterval);
+    }
+  }, [totalWidth, isHovered, isDragging]);
 
-  const reviews = [...dataReviews, ...dataReviews]; // Doubler le tableau pour un défilement fluide
+  const handleMouseDown = (e) => {
+    setIsDragging(true);
+    startX.current = e.pageX - containerRef.current.offsetLeft;
+    scrollLeft.current = scrollPosition;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging) return;
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX.current) * 2; // multiplier pour la vitesse de défilement
+    setScrollPosition(scrollLeft.current - walk);
+  };
+
+  const handleMouseUpOrLeave = () => {
+    setIsDragging(false);
+  };
+
+  const reviews = [...dataReviews, ...dataReviews];
 
   return (
-    <div className="overflow-hidden" ref={containerRef}>
+    <div
+      className="cursor-grab overflow-hidden"
+      ref={containerRef}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUpOrLeave}
+      onMouseLeave={handleMouseUpOrLeave}
+      onTouchStart={(e) => handleMouseDown(e.touches[0])}
+      onTouchMove={(e) => handleMouseMove(e.touches[0])}
+      onTouchEnd={handleMouseUpOrLeave}
+    >
       <div className="container mx-auto pb-20 lg:py-28">
         <div
           className="flex gap-6 transition-transform duration-1000 ease-linear"
           style={{ transform: `translateX(-${scrollPosition}px)` }}
         >
           {reviews.map((review, index) => (
-            <div key={index} className="w-80 shrink-0 md:w-[30rem]">
+            <div
+              key={index}
+              className="w-80 shrink-0 md:w-[30rem]"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+            >
               <ReviewCard review={review} />
             </div>
           ))}
