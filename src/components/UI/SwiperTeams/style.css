@@ -19,11 +19,12 @@
   position: relative;
   width: 400px;
   height: 520px;
-  box-shadow: 1px 22px 44px rgba(0, 0, 0, 0.2);
   border-radius: 20% 6px 20% 6px;
+  box-shadow: 1px 22px 44px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transition: 1s;
   user-select: none;
+  padding: 10px;
 }
 
 .swiper-slide-active {
@@ -69,6 +70,7 @@
   justify-content: center;
   height: 100%;
   padding: 25px 25px 30px;
+  color: #fff;
 }
 
 .title h2 {
@@ -82,6 +84,7 @@
   opacity: 0;
   transition: 0.8s;
   transition-delay: 1.5s;
+  color: #fff;
 }
 .swiper-slide-active .title p {
   opacity: 0;
@@ -187,7 +190,7 @@
 .swiper-pagination-bullet {
   width: 15px;
   height: 15px;
-  background: #fff;
+  background: var(--tw-color-bulletColor);
   border-radius: 50%;
 }
 
@@ -205,9 +208,19 @@
 
 @media (max-width: 480px) {
   .swiper-slide {
-    width: 200px;
+    width: 150px;
     height: 300px;
+    padding: 0 10px;
   }
+
+  .swiper {
+    width: 100%;
+    padding: 60px 0;
+  }
+  .swiper-slide {
+    box-shadow: none;
+  }
+
   .title h2 {
     font-size: 2rem;
   }

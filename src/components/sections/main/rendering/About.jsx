@@ -33,7 +33,7 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="h-full pt-16 md:h-screen ">
+    <section id="about" className="h-full pt-20 md:h-screen lg:pt-16">
       <div className="container mx-auto flex flex-col items-center justify-center gap-4 text-center md:gap-12 lg:h-full lg:gap-24">
         <motion.div
           initial={{ opacity: 0, y: -75 }}

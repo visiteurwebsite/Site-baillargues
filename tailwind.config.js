@@ -26,9 +26,10 @@ module.exports = {
           colors: {
             background: '#fcf9f8',
             textColor: '#060b0f',
-            primary: '#2c7fd8',
-            secondary: '#7ab3f0',
-            accent: '#4099f7'
+            primary: '#7ab3f0',
+            secondary: '#2c7fd8',
+            accent: '#4099f7',
+            bulletColor: '#060b0f'
           }
         },
         dark: {
@@ -37,7 +38,8 @@ module.exports = {
             textColor: '#f0f5f9',
             primary: '#0f4885',
             secondary: '#277ad3',
-            accent: '#4099f7'
+            accent: '#4099f7',
+            bulletColor: '#f0f5f9'
           }
         }
       }
@@ -46,7 +48,8 @@ module.exports = {
       addBase({
         ':root': {
           '--tw-color-secondary': theme('colors.secondary'),
-          '--tw-color-primary': theme('colors.primary')
+          '--tw-color-primary': theme('colors.primary'),
+          '--tw-color-bulletColor': theme('colors.bulletColor')
         }
       });
     })

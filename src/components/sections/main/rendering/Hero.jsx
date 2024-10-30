@@ -10,7 +10,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="bg-equipe flex h-[85vh] items-center justify-center bg-cover bg-center md:h-screen md:bg-right-top lg:bg-top"
+      className="bg-equipe flex h-[85vh] items-center justify-center bg-cover bg-center pt-16 md:h-screen md:bg-right-top lg:bg-top"
     >
       <div className="relative flex w-3/4 flex-col items-center justify-center sm:w-1/2 lg:w-full lg:flex-row">
         <div className="absolute inset-y-0 size-full rounded-xl  backdrop-blur-md lg:w-1/2"></div>
@@ -25,11 +25,11 @@ export function Hero() {
                 className="w-1/6 sm:w-1/4 md:w-1/6 lg:w-1/6"
               />
               <div className="flex flex-col gap-4">
-                <h1 className="text-lg font-bold md:text-justify lg:text-left lg:text-2xl">
+                <h1 className="text-lg font-bold text-white md:text-justify lg:text-left lg:text-2xl">
                   Des soins vétérinaires personnalisés pour votre animal de
                   compagnie
                 </h1>
-                <p className="text-justify text-lg">
+                <p className="text-justify text-lg text-white">
                   Notre équipe est composée de trois vétérinaires passionnés et
                   expérimentés, chacun spécialisé dans des domaines
                   complémentaires, afin d&apos;offrir des soins complets et
