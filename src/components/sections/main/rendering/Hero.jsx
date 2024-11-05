@@ -25,13 +25,25 @@ export function Hero() {
       <div className="relative z-10 flex w-3/4 flex-col items-center justify-center sm:w-1/2 lg:w-full lg:flex-row">
         <div className="absolute inset-y-0 size-full rounded-xl backdrop-blur-md lg:w-1/2"></div>
         <div className="relative flex flex-col items-center gap-2 rounded-xl border-b-2 border-primary p-4 text-center sm:gap-4 sm:p-6 lg:w-2/4 lg:flex-row lg:gap-6">
-          {!isMobile ? (
+          {isMobile ? (
+            <>
+              <h1 className="text-center text-2xl font-bold text-white">
+                Clinique vétérinaire de Baillargues
+              </h1>
+              <p className="text-center text-lg text-white">
+                Des soins vétérinaires personnalisés pour votre animal de
+                compagnie
+              </p>
+            </>
+          ) : (
             <>
               <Image
                 src="/logo.png"
                 alt="logo"
                 width={200}
                 height={200}
+                loading="lazy"
+                quality={50}
                 className="w-1/6 sm:w-1/4 md:w-1/6 lg:w-1/6"
               />
               <div className="flex flex-col gap-4">
@@ -49,16 +61,6 @@ export function Hero() {
                   à toutes vos questions.
                 </p>
               </div>
-            </>
-          ) : (
-            <>
-              <h1 className="text-center text-2xl font-bold text-white">
-                Clinique vétérinaire de Baillargues
-              </h1>
-              <p className="text-center text-lg text-white">
-                Des soins vétérinaires personnalisés pour votre animal de
-                compagnie
-              </p>
             </>
           )}
         </div>
