@@ -116,11 +116,10 @@ export const ProductCard = ({ product, translate }) => {
     >
       <Image
         src={product.thumbnail}
-        height="1000"
-        width="1000"
-        className="absolute inset-0 size-full object-cover object-left-top"
         alt={product.title}
         loading="lazy"
+        layout="fill"
+        className="absolute inset-0 size-full object-cover"
       />
     </motion.div>
   );
