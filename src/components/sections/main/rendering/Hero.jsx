@@ -18,7 +18,7 @@ export function Hero() {
         layout="fill"
         objectFit="cover"
         objectPosition="center"
-        quality={65}
+        quality={50}
         priority
         className="z-0"
       />
