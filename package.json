@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.8",
+    "@nextui-org/navbar": "^2.0.37",
     "@nextui-org/react": "^2.4.8",
-    "@vercel/speed-insights": "^1.0.14",
+    "@nextui-org/system": "^2.2.6",
+    "@nextui-org/theme": "^2.2.11",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.9",
+    "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.15",
     "next-themes": "^0.3.0",
     "react": "^18",
@@ -23,6 +27,10 @@
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
+    "@types/node": "22.7.5",
+    "@types/react": "18.3.11",
+    "@typescript-eslint/eslint-plugin": "^8.9.0",
+    "@typescript-eslint/parser": "^8.9.0",
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.15",
