@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Footer } from '../src/components/sections/footer/Footer';
 import { Header } from '../src/components/sections/header/rendering/Index';
 import { Main } from '../src/components/sections/main/rendering/Index';
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
           <Main />
           <Footer />
         </Providers>
+        <SpeedInsights />
       </body>
     </html>
   );
