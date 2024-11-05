@@ -14,11 +14,11 @@ export function Hero() {
     >
       <Image
         src="/equipe.jpg"
-        alt="Background"
+        alt="image de l'équipe vétérinaire"
         layout="fill"
         objectFit="cover"
         objectPosition="center"
-        quality={75}
+        quality={65}
         priority
         className="z-0"
       />
