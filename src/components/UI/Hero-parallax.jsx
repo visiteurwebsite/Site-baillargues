@@ -120,6 +120,7 @@ export const ProductCard = ({ product, translate }) => {
         width="1000"
         className="absolute inset-0 size-full object-cover object-left-top"
         alt={product.title}
+        loading="lazy"
       />
     </motion.div>
   );

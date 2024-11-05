@@ -14,6 +14,7 @@ function ReviewCard({ review }) {
           alt={review.name}
           width={35}
           height={35}
+          loading="lazy"
         />
         <h3 className="font-bold ">{review.name}</h3>
       </div>
