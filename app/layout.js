@@ -5,7 +5,8 @@ import './globals.css';
 import { Providers } from './providers';
 export const metadata = {
   title: 'Clinique Vétérinaire de Baillargues',
-  description: 'Soins vétérinaires personnalisés pour votre animal de compagnie'
+  description:
+    'La clinique vétérinaire de Baillargues offre des soins vétérinaires personnalisés pour votre animal de compagnie, avec une équipe de professionnels qualifiés et compétents.'
 };
 
 export default function RootLayout({ children }) {
