@@ -1,7 +1,6 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Footer } from '../src/components/sections/footer/Footer';
 import { Header } from '../src/components/sections/header/rendering/Index';
-import { Main } from '../src/components/sections/main/rendering/Index';
 import './globals.css';
 import { Providers } from './providers';
 export const metadata = {
@@ -15,7 +14,7 @@ export default function RootLayout({ children }) {
       <body className="flex min-h-screen flex-col bg-background text-textColor">
         <Providers>
           <Header />
-          <Main />
+          {children}
           <Footer />
         </Providers>
         <SpeedInsights />
