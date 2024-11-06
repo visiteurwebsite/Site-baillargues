@@ -7,21 +7,20 @@ import { dataReviews } from '../../../../data/reviews';
 function ReviewCard({ review }) {
   return (
     // eslint-disable-next-line tailwindcss/no-custom-classname
-    <div className="select flex size-80 select-none flex-col justify-between gap-4 rounded-lg border-2 border-primary/30 bg-primary p-4 py-6 text-left shadow-md shadow-primary/20 transition-all duration-300 hover:border-secondary/30 hover:bg-secondary hover:shadow-lg hover:shadow-secondary/40 md:h-64 md:w-[30rem] ">
-      <div className="flex items-center gap-2 pb-4">
+    <div className="select flex size-80 select-none flex-col justify-between gap-4 rounded-lg border-2 border-primary/30 bg-primary p-4 py-6 text-left shadow-md shadow-primary/20 transition-all duration-300 hover:border-secondary/30 hover:bg-secondary hover:shadow-lg hover:shadow-secondary/40 dark:hover:text-black md:h-64 md:w-[30rem] ">
+      <div className="flex items-center gap-2 pb-4 ">
         <Image
           src={review.googleImage}
           alt={review.name}
           width={35}
           height={35}
-          loading="lazy"
         />
         <h3 className="font-bold ">{review.name}</h3>
       </div>
       <p className="text-sm">{review.reviewDescription}</p>
       <div className="mt-auto flex gap-4">
         <div>{review.scoreReview}</div>
-        <p className="text-sm text-gray-400">{review.timeReview}</p>
+        <p className="text-sm">{review.timeReview}</p>
       </div>
     </div>
   );

@@ -10,26 +10,48 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="bg-equipe flex h-[85vh] items-center justify-center bg-cover bg-center md:h-screen md:bg-right-top lg:bg-top"
+      className="relative flex h-[85vh] items-center justify-center pt-16 md:h-screen"
     >
-      <div className="relative flex w-3/4 flex-col items-center justify-center sm:w-1/2 lg:w-full lg:flex-row">
-        <div className="absolute inset-y-0 size-full rounded-xl  backdrop-blur-md lg:w-1/2"></div>
-        <div className="relative flex flex-col items-center gap-2  rounded-xl border-b-2 border-primary p-4 text-center sm:gap-4 sm:p-6 lg:w-2/4 lg:flex-row lg:gap-6">
-          {!isMobile ? (
+      <Image
+        src="/equipe.jpg"
+        alt="image de l'équipe vétérinaire"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+        quality={50}
+        priority
+        className="z-0"
+      />
+      <div className="relative z-10 flex w-3/4 flex-col items-center justify-center sm:w-1/2 lg:w-full lg:flex-row">
+        <div className="absolute inset-y-0 size-full rounded-xl backdrop-blur-md lg:w-1/2"></div>
+        <div className="relative flex flex-col items-center gap-2 rounded-xl border-b-2 border-primary p-4 text-center sm:gap-4 sm:p-6 lg:w-2/4 lg:flex-row lg:gap-6">
+          {isMobile ? (
+            <>
+              <h1 className="text-center text-2xl font-bold text-white">
+                Clinique vétérinaire de Baillargues
+              </h1>
+              <p className="text-center text-lg text-white">
+                Des soins vétérinaires personnalisés pour votre animal de
+                compagnie
+              </p>
+            </>
+          ) : (
             <>
               <Image
                 src="/logo.png"
                 alt="logo"
                 width={200}
                 height={200}
+                loading="lazy"
+                quality={50}
                 className="w-1/6 sm:w-1/4 md:w-1/6 lg:w-1/6"
               />
               <div className="flex flex-col gap-4">
-                <h1 className="text-lg font-bold md:text-justify lg:text-left lg:text-2xl">
+                <h1 className="text-lg font-bold text-white md:text-justify lg:text-left lg:text-2xl">
                   Des soins vétérinaires personnalisés pour votre animal de
                   compagnie
                 </h1>
-                <p className="text-justify text-lg">
+                <p className="text-justify text-lg text-white">
                   Notre équipe est composée de trois vétérinaires passionnés et
                   expérimentés, chacun spécialisé dans des domaines
                   complémentaires, afin d&apos;offrir des soins complets et
@@ -39,16 +61,6 @@ export function Hero() {
                   à toutes vos questions.
                 </p>
               </div>
-            </>
-          ) : (
-            <>
-              <h1 className="text-center text-2xl font-bold text-white">
-                Clinique vétérinaire de Baillargues
-              </h1>
-              <p className="text-center text-lg text-white">
-                Des soins vétérinaires personnalisés pour votre animal de
-                compagnie
-              </p>
             </>
           )}
         </div>

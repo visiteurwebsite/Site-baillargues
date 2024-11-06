@@ -21,7 +21,7 @@ export function Services() {
           <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
             Nos Services
           </span>
-          <p className="mb-20 text-center text-xl ">
+          <p className="mb-20 text-center text-xl lg:mb-24">
             Découvrez les services que nous offrons à votre animal de compagnie.
           </p>
         </motion.div>

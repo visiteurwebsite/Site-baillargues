@@ -1,7 +1,7 @@
 export const navLinks = [
   {
     name: 'Accueil',
-    href: '#hero'
+    href: '/'
   },
   {
     name: 'À propos',
@@ -14,5 +14,9 @@ export const navLinks = [
   {
     name: 'Contact',
     href: '#contact'
+  },
+  {
+    name: 'Conseils',
+    href: '/tips'
   }
 ];
