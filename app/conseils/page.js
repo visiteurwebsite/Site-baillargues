@@ -1,5 +1,8 @@
+'use client';
+
 import { CalendarIcon, ClockIcon } from 'lucide-react';
 import Link from 'next/link';
+import { useState } from 'react';
 import { Badge, badgeVariants } from '../../src/components/UI/shadcn/Badge';
 import {
   Card,
@@ -9,25 +12,74 @@ import {
   CardHeader,
   CardTitle
 } from '../../src/components/UI/shadcn/Card';
+import DotPattern from '../../src/components/UI/shadcn/DotPattern';
 import { articles } from '../../src/data/articles';
-
-export const metadata = {
-  title: 'Conseils',
-  description:
-    'La clinique vétérinaire de Baillargues vous propose des conseils pour la santé et le bien-être de vos animaux'
-};
+import { cn } from '../../src/lib/utils';
 
 export default function Conseils() {
+  const [selectedCategory, setSelectedCategory] = useState('');
+
+  const handleCategoryChange = (event) => {
+    setSelectedCategory(event.target.value);
+  };
+
+  const filteredArticles = selectedCategory
+    ? articles.filter((article) => article.category === selectedCategory)
+    : articles;
+
   return (
-    <div className="container mx-auto min-h-screen p-4 py-10">
-      <h1 className="mb-6 text-3xl font-bold">Articles Récents</h1>
+    <div className="container mx-auto  min-h-screen flex-col gap-4 p-4 py-10">
+      <DotPattern
+        width={20}
+        height={20}
+        cx={1}
+        cy={1}
+        cr={1}
+        className={cn(
+          ' z-0 [mask-image:linear-gradient(to_top_right,transparent,transparent,white)] '
+        )}
+      />
+      <span className="mb-6 inline-block border-b bg-gradient-to-r from-primary to-secondary bg-clip-text pb-4 text-4xl font-bold tracking-tight text-transparent lg:text-6xl">
+        Articles Récents
+      </span>
+      <p className="mb-6 text-xl">
+        Découvrez nos articles pour vous aider à prendre soin de votre animal de
+        compagnie.
+      </p>
+
+      <div className="mb-6">
+        <label htmlFor="category-select" className="mr-2">
+          Choisir une catégorie:
+        </label>
+        <select
+          id="category-select"
+          value={selectedCategory}
+          onChange={handleCategoryChange}
+          className="rounded border p-2"
+        >
+          <option value="">Toutes les catégories</option>
+          {[...new Set(articles.map((article) => article.category))].map(
+            (category) => (
+              <option key={category} value={category}>
+                {category}
+              </option>
+            )
+          )}
+        </select>
+      </div>
+
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {articles.map((article) => (
-          <Card key={article.id} className="flex flex-col">
+        {filteredArticles.map((article) => (
+          <Card
+            key={article.id}
+            className="z-10 flex flex-col bg-primary border-none shadow-lg transition-all duration-300 hover:shadow-accent/50"
+          >
             <CardHeader>
               <div className="flex items-start justify-between">
                 <CardTitle className="mb-2 text-xl">{article.title}</CardTitle>
-                <Badge>{article.category}</Badge>
+                <Badge variant="fade" className="bg-black/60 px-4 py-1">
+                  {article.categoryImg}
+                </Badge>
               </div>
               <CardDescription>{article.introduction}</CardDescription>
             </CardHeader>
@@ -47,7 +99,10 @@ export default function Conseils() {
             <CardFooter>
               <Link
                 href={`/conseils/${article.id}`}
-                className={badgeVariants({ variant: 'outline' })}
+                className={cn(
+                  badgeVariants({ variant: 'outline' }),
+                  'bg-black/60'
+                )}
               >
                 Lire l&apos;article
               </Link>

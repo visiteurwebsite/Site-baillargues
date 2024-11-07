@@ -1,3 +1,5 @@
+import { FaCat, FaDog, FaHeartbeat } from 'react-icons/fa';
+
 export const articles = [
   {
     id: '1',
@@ -6,6 +8,7 @@ export const articles = [
       'Les chiens, qu’ils soient grands ou petits, actifs ou plus tranquilles, ont besoin d’une attention quotidienne pour rester en bonne santé et bien équilibrés. Dans cet article, nous aborderons les besoins essentiels de votre chien : alimentation, exercice, soins de santé et bien-être général. Suivre ces conseils vous aidera à garder votre compagnon en pleine forme et heureux au quotidien.',
     readTime: '5 min',
     date: '2024-06-15',
+    categoryImg: <FaDog size={20} />,
     category: 'Chien',
     image: '/article1.jpg',
     sections: [
@@ -41,6 +44,7 @@ export const articles = [
       'Les chats sont des compagnons uniques qui nécessitent des soins bien spécifiques. Bien que réputés pour leur autonomie, ils ont tout de même besoin d’attention pour rester en bonne santé et heureux. Ce guide aborde les points essentiels pour s’occuper de son chat : alimentation, hygiène, et suivi de santé.',
     readTime: '4 min',
     date: '2024-06-20',
+    categoryImg: <FaCat size={20} />,
     category: 'Chat',
     image: '/article2.jpg',
     sections: [
@@ -77,6 +81,7 @@ export const articles = [
       'Les tiques et les puces sont des parasites courants chez les animaux de compagnie, pouvant causer des irritations et transmettre des maladies graves. Prévenir leur apparition est essentiel pour protéger la santé de votre chien ou de votre chat. Ce guide vous explique comment choisir les bons traitements et comment les utiliser de façon efficace.',
     readTime: '6 min',
     date: '2024-07-01',
+    categoryImg: <FaHeartbeat size={20} />,
     category: 'Santé Animale',
     image: '/article3.jpg',
     sections: [

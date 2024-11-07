@@ -64,9 +64,12 @@ export default function VetNavbar() {
         />
         <NavbarBrand className="lg:pr-32">
           {!isMobile ? (
-            <p className="text-sm font-bold uppercase md:text-base">
+            <Link
+              href="/"
+              className="text-sm font-bold uppercase text-textColor md:text-base"
+            >
               Clinique de Baillargues
-            </p>
+            </Link>
           ) : null}
         </NavbarBrand>
       </NavbarContent>
