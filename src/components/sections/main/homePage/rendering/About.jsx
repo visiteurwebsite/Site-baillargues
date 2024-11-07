@@ -61,7 +61,7 @@ export const About = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="relative w-full flex-col items-center justify-center gap-8 pb-24"
           >
-            <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-6">
+            <span className="inline-block border-b bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-2xl font-bold text-transparent md:text-6xl lg:pb-6">
               À propos de nous
             </span>
             <p className="mx-auto pt-2 text-center text-xl md:pt-4 lg:pt-6">

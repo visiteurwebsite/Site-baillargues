@@ -94,7 +94,7 @@ export const Header = () => {
       transition={{ duration: 0.5, delay: 0.3 }}
       className="relative left-0 top-0 mx-auto w-full max-w-7xl px-6 py-24 text-center"
     >
-      <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
+      <span className="inline-block border-b-2 border-primary bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-2xl font-bold text-transparent md:text-6xl lg:pb-4">
         Galerie de votre <br />
         clinique vétérinaire
       </span>

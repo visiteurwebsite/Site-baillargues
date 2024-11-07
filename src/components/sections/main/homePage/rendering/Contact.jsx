@@ -15,7 +15,7 @@ export function Contact() {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="flex flex-col items-center justify-center gap-4"
       >
-        <span className="inline-block border-b-2 border-primary pb-2 text-2xl font-bold md:text-6xl lg:pb-4">
+        <span className="inline-block border-b-2 border-primary bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-2xl font-bold text-transparent md:text-6xl lg:pb-4">
           Nos clients parlent de nous
         </span>
         <p className="mb-20 text-center text-xl ">
@@ -27,7 +27,7 @@ export function Contact() {
       <div className="relative">
         <Particles className="absolute z-10 size-full" />
         <div className="container mx-auto lg:pb-16">
-          <h2 className="mb-8 pb-4 text-center text-2xl font-bold md:text-4xl lg:pb-16">
+          <h2 className="mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text pb-4 text-center text-2xl font-bold text-transparent md:text-4xl lg:pb-16">
             Contactez-nous
           </h2>
           <div className="flex flex-col lg:h-[30rem] lg:flex-row">
