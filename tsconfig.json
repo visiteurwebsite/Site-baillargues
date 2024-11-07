@@ -24,7 +24,8 @@
     "**/*.ts",
     "**/*.tsx",
     "src/components/UI/animated-modal.jsx",
-    "src/components/sections/main/ModalService.jsx"
+    "src/components/sections/main/ModalService.jsx",
+    "app/conseils/[articleId]/page.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -17,6 +17,6 @@ export const navLinks = [
   },
   {
     name: 'Conseils',
-    href: '/tips'
+    href: '/conseils'
   }
 ];
