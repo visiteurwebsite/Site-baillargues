@@ -27,7 +27,7 @@ export function Hero() {
         <div className="relative flex flex-col items-center gap-2 rounded-xl border-b-2 border-primary p-4 text-center sm:gap-4 sm:p-6 lg:w-2/4 lg:flex-row lg:gap-6">
           {isMobile ? (
             <>
-              <h1 className="text-center text-2xl font-bold">
+              <h1 className="text-center text-2xl font-bold text-white">
                 Clinique vétérinaire de Baillargues
               </h1>
               <p className="text-center text-lg text-white">
