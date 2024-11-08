@@ -21,9 +21,9 @@ module.exports = {
           colors: {
             background: '#f9f9fa',
             textColor: '#080709',
-            primary: '#807693',
-            secondary: '#beacaf',
-            accent: '#a5938d',
+            primary: '#a5938d',
+            secondary: '#807693',
+            accent: '#beacaf',
             bulletColor: '#807693'
           }
         },

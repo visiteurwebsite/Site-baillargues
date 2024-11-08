@@ -55,7 +55,7 @@ export default function VetNavbar() {
       isMenuOpen={isMenuOpen}
       isBordered
       shouldHideOnScroll
-      className="border-b-2 border-primary"
+      className="border-b-2 border-secondary"
     >
       <NavbarContent className="gap-12 md:gap-4">
         <NavbarMenuToggle
@@ -66,7 +66,7 @@ export default function VetNavbar() {
           {!isMobile ? (
             <Link
               href="/"
-              className="text-sm font-bold uppercase tracking-wide text-textColor md:text-base lg:text-lg "
+              className="text-sm font-bold uppercase tracking-wide text-secondary dark:text-textColor md:text-base lg:text-lg "
             >
               Clinique de Baillargues
             </Link>
