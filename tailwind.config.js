@@ -10,12 +10,7 @@ module.exports = {
   ],
   theme: {
     extend: {
-      borderRadius: {
-        ImageRadius: '20% 6px 20% 6px'
-      },
-      colors: {
-        secondary: '#7ab3f0'
-      }
+      colors: {}
     }
   },
   darkMode: 'class',
@@ -24,22 +19,22 @@ module.exports = {
       themes: {
         light: {
           colors: {
-            background: '#fcf9f8',
-            textColor: '#060b0f',
-            primary: '#7ab3f0',
-            secondary: '#2c7fd8',
-            accent: '#4099f7',
-            bulletColor: '#060b0f'
+            background: '#f9f9fa',
+            textColor: '#080709',
+            primary: '#807693',
+            secondary: '#beacaf',
+            accent: '#a5938d',
+            bulletColor: '#807693'
           }
         },
         dark: {
           colors: {
-            background: '#04070b',
-            textColor: '#f0f5f9',
-            primary: '#0f4885',
-            secondary: '#277ad3',
-            accent: '#4099f7',
-            bulletColor: '#f0f5f9'
+            background: '#040506',
+            textColor: '#ecf1f3',
+            primary: '#567b8f',
+            secondary: '#383a5c',
+            accent: '#4b4573',
+            bulletColor: '#567b8f'
           }
         }
       }

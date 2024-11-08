@@ -40,7 +40,7 @@ export default function Conseils() {
         )}
       />
 
-      <span className="mb-6 inline-block border-b bg-gradient-to-r from-primary to-secondary bg-clip-text pb-4 text-4xl font-bold tracking-tight text-transparent lg:text-6xl">
+      <span className="mb-6 inline-block border-b-2 border-accent bg-gradient-to-r from-primary to-accent bg-clip-text pb-4 text-4xl font-bold tracking-tight text-transparent lg:text-6xl">
         Articles Récents
       </span>
       <p className="mb-6 text-xl">
@@ -73,7 +73,7 @@ export default function Conseils() {
         {filteredArticles.map((article) => (
           <Card
             key={article.id}
-            className="z-20 flex flex-col border-none bg-primary shadow-lg transition-all duration-300 hover:shadow-accent/50"
+            className="z-20 flex flex-col border-none bg-primary shadow-lg transition-all duration-300 hover:shadow-accent/70"
           >
             <CardHeader>
               <div className="flex items-start justify-between">
