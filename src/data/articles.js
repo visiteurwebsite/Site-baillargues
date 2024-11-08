@@ -8,7 +8,7 @@ export const articles = [
       'Les chiens, qu’ils soient grands ou petits, actifs ou plus tranquilles, ont besoin d’une attention quotidienne pour rester en bonne santé et bien équilibrés. Dans cet article, nous aborderons les besoins essentiels de votre chien : alimentation, exercice, soins de santé et bien-être général. Suivre ces conseils vous aidera à garder votre compagnon en pleine forme et heureux au quotidien.',
     readTime: '5 min',
     date: '2024-06-15',
-    categoryImg: <FaDog size={20} />,
+    categoryImg: <FaDog color="white" size={20} />,
     category: 'Chien',
     image: '/article1.jpg',
     sections: [
@@ -44,7 +44,7 @@ export const articles = [
       'Les chats sont des compagnons uniques qui nécessitent des soins bien spécifiques. Bien que réputés pour leur autonomie, ils ont tout de même besoin d’attention pour rester en bonne santé et heureux. Ce guide aborde les points essentiels pour s’occuper de son chat : alimentation, hygiène, et suivi de santé.',
     readTime: '4 min',
     date: '2024-06-20',
-    categoryImg: <FaCat size={20} />,
+    categoryImg: <FaCat color="white" size={20} />,
     category: 'Chat',
     image: '/article2.jpg',
     sections: [
@@ -81,7 +81,7 @@ export const articles = [
       'Les tiques et les puces sont des parasites courants chez les animaux de compagnie, pouvant causer des irritations et transmettre des maladies graves. Prévenir leur apparition est essentiel pour protéger la santé de votre chien ou de votre chat. Ce guide vous explique comment choisir les bons traitements et comment les utiliser de façon efficace.',
     readTime: '6 min',
     date: '2024-07-01',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article3.jpg',
     sections: [
@@ -119,7 +119,7 @@ export const articles = [
       'L’arrivée d’un chiot dans une nouvelle maison est un moment excitant, mais il s’accompagne de nombreuses responsabilités. Un chiot a besoin d’un environnement adapté, de soins particuliers, et d’une attention constante pour bien s’intégrer. Voici quelques conseils pour bien accueillir votre nouveau compagnon.',
     readTime: '5 min',
     date: '2024-07-10',
-    categoryImg: <FaDog size={20} />,
+    categoryImg: <FaDog color="white" size={20} />,
     category: 'Chien',
     image: '/article4.jpg',
     sections: [
@@ -155,7 +155,7 @@ export const articles = [
       'Tout comme pour les humains, l’hygiène dentaire est essentielle pour les animaux de compagnie. Les soins dentaires réguliers permettent de prévenir de nombreux problèmes de santé et contribuent au bien-être de votre animal. Découvrez comment prendre soin de leurs dents pour éviter les complications.',
     readTime: '4 min',
     date: '2024-07-15',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article5.jpg',
     sections: [
@@ -191,7 +191,7 @@ export const articles = [
       'L’anxiété de séparation est un problème courant chez les chiens qui n’aiment pas être seuls. Elle peut se traduire par des aboiements, des destructions, ou d’autres comportements indésirables. Voici quelques astuces pour aider votre chien à mieux gérer votre absence.',
     readTime: '5 min',
     date: '2024-07-20',
-    categoryImg: <FaDog size={20} />,
+    categoryImg: <FaDog color="white" size={20} />,
     category: 'Chien',
     image: '/article6.jpg',
     sections: [
@@ -227,7 +227,7 @@ export const articles = [
       'Les vaccinations protègent votre animal contre de nombreuses maladies graves et parfois mortelles. Ce guide explique pourquoi les vaccins sont importants et quels sont les principaux vaccins à faire pour les chiens et les chats.',
     readTime: '4 min',
     date: '2024-07-25',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article7.jpg',
     sections: [
@@ -263,7 +263,7 @@ export const articles = [
       'L’obésité chez les chiens et les chats est un problème de plus en plus courant. Elle peut entraîner de nombreux problèmes de santé et diminuer l’espérance de vie de votre animal. Découvrez comment reconnaître les signes de l’obésité, prévenir ce problème, et agir si besoin.',
     readTime: '5 min',
     date: '2024-07-30',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article8.jpg',
     sections: [
@@ -299,7 +299,7 @@ export const articles = [
       'De plus en plus de propriétaires d’animaux de compagnie s’intéressent aux médecines alternatives pour compléter les soins traditionnels. Médecine douce, thérapies naturelles, ou encore homéopathie : découvrez comment ces pratiques peuvent contribuer au bien-être de votre compagnon.',
     readTime: '5 min',
     date: '2024-08-05',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article9.jpg',
     sections: [
@@ -335,7 +335,7 @@ export const articles = [
       'La médecine traditionnelle chinoise (MTC) est une pratique ancienne basée sur l’équilibre des énergies dans le corps. Elle est désormais utilisée pour les animaux afin de traiter certains troubles et favoriser le bien-être. Voici un aperçu des techniques de la MTC appliquées aux animaux.',
     readTime: '5 min',
     date: '2024-08-10',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article10.jpg',
     sections: [
@@ -371,7 +371,7 @@ export const articles = [
       'L’acupuncture est une pratique millénaire qui consiste à stimuler certains points du corps à l’aide d’aiguilles fines pour améliorer la santé. Aujourd’hui, elle est également pratiquée sur les animaux pour soulager des douleurs et traiter diverses affections.',
     readTime: '5 min',
     date: '2024-08-15',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article11.jpg',
     sections: [
@@ -407,7 +407,7 @@ export const articles = [
       'L’alimentation naturelle et équilibrée est l’un des piliers de la santé animale. Opter pour une nutrition plus naturelle peut renforcer l’immunité, améliorer la digestion, et offrir une meilleure qualité de vie. Voici comment bien nourrir votre animal en choisissant des options plus saines.',
     readTime: '5 min',
     date: '2024-08-20',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article12.jpg',
     sections: [
@@ -443,7 +443,7 @@ export const articles = [
       'Le massage thérapeutique pour animaux est une pratique en plein essor, qui permet de soulager les douleurs, de réduire le stress, et d’améliorer le bien-être général. Cette approche douce peut être utilisée en complément des soins vétérinaires pour offrir une détente et un soin adaptés.',
     readTime: '5 min',
     date: '2024-08-25',
-    categoryImg: <FaHeartbeat size={20} />,
+    categoryImg: <FaHeartbeat color="white" size={20} />,
     category: 'Santé Animale',
     image: '/article13.jpg',
     sections: [
@@ -479,7 +479,7 @@ export const articles = [
       'La stérilisation des chattes est une pratique courante, mais certains propriétaires hésitent encore à y recourir. Elle présente pourtant de nombreux bénéfices pour la santé et le bien-être de l’animal, tout en aidant à limiter la surpopulation féline. Voici tout ce que vous devez savoir sur la stérilisation.',
     readTime: '5 min',
     date: '2024-09-01',
-    categoryImg: <FaCat size={20} />,
+    categoryImg: <FaCat color="white" size={20} />,
     category: 'Chat',
     image: '/article14.jpg',
     sections: [
@@ -515,7 +515,7 @@ export const articles = [
       'Les chats d’appartement, sans accès à l’extérieur, peuvent parfois s’ennuyer et devenir inactifs. Il est donc essentiel de les stimuler pour éviter l’ennui, l’anxiété, et favoriser leur bien-être mental et physique. Voici quelques idées pour bien occuper votre chat.',
     readTime: '5 min',
     date: '2024-09-05',
-    categoryImg: <FaCat size={20} />,
+    categoryImg: <FaCat color="white" size={20} />,
     category: 'Chat',
     image: '/article15.jpg',
     sections: [
@@ -551,7 +551,7 @@ export const articles = [
       'Les soins dentaires sont essentiels pour les chats, car les infections buccales peuvent entraîner des problèmes de santé graves. Pourtant, beaucoup de propriétaires négligent cet aspect de leur bien-être. Voici comment entretenir la santé buccale de votre chat.',
     readTime: '5 min',
     date: '2024-09-10',
-    categoryImg: <FaCat size={20} />,
+    categoryImg: <FaCat color="white" size={20} />,
     category: 'Chat',
     image: '/article16.jpg',
     sections: [
@@ -587,7 +587,7 @@ export const articles = [
       'La socialisation du chaton est essentielle pour qu’il devienne un chat adulte équilibré. Une bonne socialisation favorise son intégration dans la famille et l’aide à s’adapter aux interactions avec d’autres animaux ou humains.',
     readTime: '5 min',
     date: '2024-09-15',
-    categoryImg: <FaCat size={20} />,
+    categoryImg: <FaCat color="white" size={20} />,
     category: 'Chat',
     image: '/article17.jpg',
     sections: [
@@ -623,7 +623,7 @@ export const articles = [
       'Les maladies rénales sont fréquentes chez les chats, surtout en vieillissant. Elles peuvent affecter gravement leur qualité de vie. Apprenez à détecter les premiers signes et à prévenir ces maladies pour garantir un suivi de santé optimal pour votre chat.',
     readTime: '5 min',
     date: '2024-09-20',
-    categoryImg: <FaCat size={20} />,
+    categoryImg: <FaCat color="white" size={20} />,
     category: 'Chat',
     image: '/article18.jpg',
     sections: [
@@ -659,7 +659,7 @@ export const articles = [
       'La vaccination est l’un des moyens les plus efficaces pour protéger votre chien contre de nombreuses maladies graves et contagieuses. Voici un guide complet pour mieux comprendre l’importance de la vaccination, les vaccins recommandés et le calendrier de vaccination.',
     readTime: '5 min',
     date: '2024-09-25',
-    categoryImg: <FaDog size={20} />,
+    categoryImg: <FaDog color="white" size={20} />,
     category: 'Chien',
     image: '/article19.jpg',
     sections: [
@@ -705,7 +705,7 @@ export const articles = [
       'La vaccination est cruciale pour protéger les chats contre des maladies contagieuses et potentiellement mortelles. Bien que certains chats vivent uniquement à l’intérieur, ils peuvent tout de même être exposés à des agents pathogènes. Voici pourquoi et comment vacciner votre chat.',
     readTime: '5 min',
     date: '2024-09-30',
-    categoryImg: <FaCat size={20} />,
+    categoryImg: <FaCat color="white" size={20} />,
     category: 'Chat',
     image: '/article20.jpg',
     sections: [

@@ -65,8 +65,8 @@ export function Hero() {
           )}
         </div>
       </div>
-      <div className="absolute bottom-5 z-10 flex w-full justify-center">
-        <ArrowDown size={24} color="white" />
+      <div className="absolute bottom-16 z-10 flex justify-center border-secondary p-2">
+        <ArrowDown size={30} color="white" />
       </div>
     </section>
   );

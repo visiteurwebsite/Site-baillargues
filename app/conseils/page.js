@@ -77,12 +77,19 @@ export default function Conseils() {
           >
             <CardHeader>
               <div className="flex items-start justify-between">
-                <CardTitle className="mb-2 text-xl">{article.title}</CardTitle>
-                <Badge variant="fade" className="bg-black/60 px-4 py-1">
+                <CardTitle className="mb-2 text-textColor">
+                  {article.title}
+                </CardTitle>
+                <Badge
+                  variant="fade"
+                  className="bg-white/30 px-4 py-1 dark:bg-black/60"
+                >
                   {article.categoryImg}
                 </Badge>
               </div>
-              <CardDescription>{article.introduction}</CardDescription>
+              <CardDescription className="font-semibold">
+                {article.introduction}
+              </CardDescription>
             </CardHeader>
             <CardContent className="grow">
               {/* Espace pour du contenu supplémentaire si nécessaire */}
@@ -102,7 +109,7 @@ export default function Conseils() {
                 href={`/conseils/${article.id}`}
                 className={cn(
                   badgeVariants({ variant: 'outline' }),
-                  'bg-black/60'
+                  'dark:bg-black/60 bg-white/30'
                 )}
               >
                 Lire l&apos;article
