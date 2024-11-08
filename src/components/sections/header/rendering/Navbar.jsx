@@ -66,7 +66,7 @@ export default function VetNavbar() {
           {!isMobile ? (
             <Link
               href="/"
-              className="text-sm font-bold uppercase tracking-wide text-black/80 md:text-base lg:text-lg "
+              className="text-sm font-bold uppercase tracking-wide text-textColor md:text-base lg:text-lg "
             >
               Clinique de Baillargues
             </Link>
