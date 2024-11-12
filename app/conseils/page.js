@@ -28,7 +28,7 @@ export default function Conseils() {
     : articles;
 
   return (
-    <div className="container mx-auto  min-h-screen flex-col gap-4 p-4 py-10">
+    <div className="container mx-auto  min-h-screen flex-col gap-4 p-4 py-28">
       <DotPattern
         width={20}
         height={20}

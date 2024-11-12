@@ -101,11 +101,11 @@ export default function VetNavbar() {
             {(openModal) => (
               <Button
                 onClick={openModal}
-                color="primary"
+                color="danger"
                 variant="flat"
-                className=" text-xs md:block md:text-sm md:uppercase"
+                className=" text-xs text-white md:block md:text-sm md:uppercase"
               >
-                Urgence
+                <p className="text-xs text-white md:text-sm">Urgence</p>
               </Button>
             )}
           </NavbarModalUrgencyLogic>
