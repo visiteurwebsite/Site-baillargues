@@ -99,7 +99,7 @@ export function Reviews() {
       onTouchMove={(e) => handleMouseMove(e.touches[0])}
       onTouchEnd={handleMouseUpOrLeave}
     >
-      <div className="container mx-auto pb-20 lg:py-28">
+      <div className="container mx-auto pb-20 lg:py-24">
         <div
           className="flex gap-6 transition-transform duration-1000 ease-linear"
           style={{ transform: `translateX(-${scrollPosition}px)` }}

@@ -37,15 +37,6 @@ export function Hero() {
             </>
           ) : (
             <>
-              <Image
-                src="/logo.png"
-                alt="logo"
-                width={200}
-                height={200}
-                loading="lazy"
-                quality={50}
-                className="w-1/6 sm:w-1/4 md:w-1/6 lg:w-1/6"
-              />
               <div className="flex flex-col gap-4">
                 <h1 className="text-lg font-bold text-white md:text-justify lg:text-left lg:text-2xl">
                   Des soins vétérinaires personnalisés pour votre animal de
@@ -65,7 +56,7 @@ export function Hero() {
           )}
         </div>
       </div>
-      <div className="absolute bottom-16 z-10 flex justify-center border-secondary p-2">
+      <div className="absolute bottom-0 z-10 flex justify-center border-secondary p-2">
         <ArrowDown size={30} color="white" />
       </div>
     </section>

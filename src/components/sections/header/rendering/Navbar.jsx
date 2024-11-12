@@ -11,6 +11,7 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle
 } from '@nextui-org/react';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { navLinks } from '../../../../constant/navlink';
@@ -55,7 +56,7 @@ export default function VetNavbar() {
       isMenuOpen={isMenuOpen}
       isBordered
       shouldHideOnScroll
-      className="border-b-2 border-secondary"
+      className="absolute  border-b-2 border-primary"
     >
       <NavbarContent className="gap-12 md:gap-4">
         <NavbarMenuToggle
@@ -66,8 +67,15 @@ export default function VetNavbar() {
           {!isMobile ? (
             <Link
               href="/"
-              className="text-sm font-bold uppercase tracking-wide text-secondary dark:text-textColor md:text-base lg:text-lg "
+              className="gap-4 text-sm font-bold uppercase tracking-wide text-secondary dark:text-textColor md:text-base lg:text-lg "
             >
+              <Image
+                src="/logo.png"
+                alt="logo"
+                width={50}
+                height={50}
+                className=""
+              />
               Clinique de Baillargues
             </Link>
           ) : null}
@@ -109,6 +117,13 @@ export default function VetNavbar() {
       <NavbarMenu className="flex flex-col items-center justify-center pb-24">
         {navLinks.map((link, index) => (
           <NavbarMenuItem className="h-8 justify-center pb-12" key={index}>
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={400}
+              height={50}
+              className="absolute left-1/2 top-20 -translate-x-1/2 opacity-10"
+            />
             <Link
               href={link.href}
               onClick={() => setIsMenuOpen(false)}

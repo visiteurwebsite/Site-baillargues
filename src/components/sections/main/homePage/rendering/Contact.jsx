@@ -3,12 +3,11 @@ import { motion } from 'framer-motion';
 import { AiTwotoneMail } from 'react-icons/ai';
 import { IoIosPhonePortrait } from 'react-icons/io';
 import { Map } from '../../../../UI/Map';
-import Particles from '../../../../UI/shadcn/Particles';
 import { Reviews } from './Reviews';
 
 export function Contact() {
   return (
-    <section id="contact" className="relative lg:py-16">
+    <section id="contact" className="relative mx-6 lg:py-24">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -18,20 +17,29 @@ export function Contact() {
         <span className="inline-block border-b-2 border-primary bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-2xl font-bold text-transparent md:text-6xl lg:pb-4">
           Nos clients parlent de nous
         </span>
-        <p className="mb-20 text-center text-xl ">
+        <p className="pb-24 text-center text-xl lg:pb-0">
           Quoi de mieux que les avis de nos clients pour vous donner confiance
           en nous ?
         </p>
       </motion.div>
       <Reviews />
       <div className="relative">
-        <Particles className="absolute z-10 size-full" />
-        <div className="container mx-auto lg:pb-16">
-          <h2 className="mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text pb-4 text-center text-2xl font-bold text-transparent md:text-4xl lg:pb-16">
+        <div className="container mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mb-8 bg-gradient-to-r from-primary to-secondary bg-clip-text pb-4 text-center text-4xl font-bold text-transparent md:text-6xl lg:pb-16"
+          >
             Contactez-nous
-          </h2>
+          </motion.h2>
           <div className="flex flex-col lg:h-[30rem] lg:flex-row">
-            <div className="flex flex-col gap-2 text-center lg:w-1/3 lg:pb-16 lg:text-left">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="flex flex-col gap-2 text-center lg:w-1/3 lg:pb-16 lg:text-left"
+            >
               <h2 className="mb-8 text-2xl font-bold md:text-4xl">
                 Nos horaires d&apos;ouverture
               </h2>
@@ -61,7 +69,7 @@ export function Contact() {
                   <p className="">contact@gmail.com</p>
                 </a>
               </div>
-            </div>
+            </motion.div>
             <div className="w-full lg:w-2/3">
               <Map />
             </div>

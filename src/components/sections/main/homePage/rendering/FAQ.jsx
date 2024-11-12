@@ -47,8 +47,8 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="px-12 py-10  lg:px-24">
-      <div className="container mx-auto flex flex-col items-center justify-center gap-4 py-12">
+    <section id="faq" className="px-12 lg:px-24">
+      <div className="container  mx-auto flex flex-col items-center justify-center gap-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}

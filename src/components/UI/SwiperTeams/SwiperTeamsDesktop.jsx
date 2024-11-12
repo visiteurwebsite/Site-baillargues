@@ -7,7 +7,7 @@ import './style.css';
 
 export function SwiperTeamsDesktop() {
   return (
-    <div className="w-full lg:pb-20">
+    <div className="w-full">
       <Swiper
         modules={[Pagination, Autoplay]}
         loop={true}

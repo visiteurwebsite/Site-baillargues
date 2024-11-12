@@ -36,12 +36,12 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="h-full pt-20 md:h-screen  lg:pt-0">
+    <section id="about" className="  ">
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative h-full "
+        className="relative "
       >
         <DotPattern
           width={20}
@@ -54,14 +54,14 @@ export const About = () => {
           )}
         />
 
-        <div className="container mx-auto flex flex-col items-center justify-center gap-4 text-center md:gap-12 lg:h-full ">
+        <div className="container mx-auto flex flex-col items-center text-center  ">
           <motion.div
             initial={{ opacity: 0, y: -75 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="relative w-full flex-col items-center justify-center gap-8 pb-24"
+            className="relative w-full flex-col items-center gap-8 py-24"
           >
-            <span className="inline-block border-b bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-2xl font-bold text-transparent md:text-6xl lg:pb-6">
+            <span className="inline-block border-b bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-4xl font-bold text-transparent md:text-6xl lg:pb-6">
               À propos de nous
             </span>
             <p className="mx-auto pt-2 text-center text-xl md:pt-4 lg:pt-6">

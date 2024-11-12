@@ -7,7 +7,7 @@ import './style.css';
 
 export function SwiperTeamsMobile() {
   return (
-    <div className="w-full lg:pb-20">
+    <div className="mx-auto w-80">
       <Swiper
         modules={[Pagination, Autoplay]}
         loop={true}
