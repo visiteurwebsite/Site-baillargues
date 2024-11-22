@@ -11,44 +11,20 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle
 } from '@nextui-org/react';
+import { useTheme } from 'next-themes';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { navLinks } from '../../../../constant/navlink';
 import { NavbarModalUrgencyLogic } from '../logic/NavbarModalUrgencyLogic';
 import { ThemeSwitcherLogic } from '../logic/ThemeSwitcherLogic';
 
 export default function VetNavbar() {
+  const { theme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useMediaQuery({ query: '(max-width: 468px)' });
-  const [activeSection, setActiveSection] = useState('');
 
-  useEffect(() => {
-    const sections = document.querySelectorAll('section');
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveSection(entry.target.id);
-        }
-      });
-    }, options);
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach((section) => {
-        observer.unobserve(section);
-      });
-    };
-  }, []);
+  const logoSrc = theme === 'dark' ? '/logo.png' : '/logo1.png';
 
   return (
     <Navbar
@@ -56,40 +32,35 @@ export default function VetNavbar() {
       isMenuOpen={isMenuOpen}
       isBordered
       shouldHideOnScroll
-      className="absolute  border-b-2 border-primary"
+      className="absolute border-b-2 border-primary"
     >
       <NavbarContent className="gap-12 md:gap-4">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
-          className="md:hidden"
+          className="lg:hidden"
         />
         <NavbarBrand className="lg:pr-32">
           {!isMobile ? (
             <Link
               href="/"
-              className="gap-4 text-sm font-bold uppercase tracking-wide text-secondary dark:text-textColor md:text-base lg:text-lg "
+              className="gap-4 text-sm font-bold uppercase tracking-wide text-textColor md:text-base lg:text-lg"
             >
               <Image
-                src="/logo.png"
+                src={logoSrc}
                 alt="logo"
                 width={50}
                 height={50}
                 className=""
               />
-              Clinique de Baillargues
+              Clinique Vétérinaire de Baillargues
             </Link>
           ) : null}
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="hidden md:flex md:gap-4" justify="center">
+      <NavbarContent className="hidden md:gap-4 lg:flex" justify="center">
         {navLinks.map((link, index) => (
           <NavbarItem key={index}>
-            <Link
-              href={link.href}
-              className={`text-textColor hover:text-accent ${
-                activeSection === link.href.substring(1) ? 'text-primary' : ''
-              }`}
-            >
+            <Link href={link.href} className="text-textColor hover:font-bold">
               {link.name}
             </Link>
           </NavbarItem>
@@ -102,7 +73,6 @@ export default function VetNavbar() {
               <Button
                 onClick={openModal}
                 color="danger"
-                variant="flat"
                 className=" text-xs text-white md:block md:text-sm md:uppercase"
               >
                 <p className="text-xs text-white md:text-sm">Urgence</p>
@@ -127,12 +97,7 @@ export default function VetNavbar() {
             <Link
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className={`w-full uppercase ${
-                activeSection === link.href.substring(1)
-                  ? 'text-accent'
-                  : 'text-textColor'
-              }`}
-              size="lg"
+              className="w-full uppercase"
             >
               {link.name}
             </Link>

@@ -87,7 +87,7 @@ export default function Conseils() {
                   {article.categoryImg}
                 </Badge>
               </div>
-              <CardDescription className="font-semibold">
+              <CardDescription className="font-semibold text-black dark:text-textColor">
                 {article.introduction}
               </CardDescription>
             </CardHeader>

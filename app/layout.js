@@ -1,6 +1,7 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Footer } from '../src/components/sections/footer/Footer';
 import { Header } from '../src/components/sections/header/rendering/Index';
+import { ScrollToTopButton } from '../src/components/UI/rendering/ScrollToTopButton';
 import './globals.css';
 import { Providers } from './providers';
 export const metadata = {
@@ -11,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr" className="dark">
+    <html lang="fr">
       <body className="flex min-h-screen flex-col bg-background text-textColor">
         <Providers>
           <Header />
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
           <Footer />
         </Providers>
         <SpeedInsights />
+        <ScrollToTopButton />
       </body>
     </html>
   );

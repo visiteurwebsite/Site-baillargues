@@ -15,12 +15,10 @@ export function Hero() {
       <Image
         src="/equipe.jpg"
         alt="image de l'équipe vétérinaire"
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
-        quality={50}
+        fill
+        quality={100}
         priority
-        className="z-0"
+        className="z-0 object-cover object-top"
       />
       <div className="relative z-10 flex w-3/4 flex-col items-center justify-center sm:w-1/2 lg:w-full lg:flex-row">
         <div className="absolute inset-y-0 size-full rounded-xl backdrop-blur-md lg:w-1/2"></div>

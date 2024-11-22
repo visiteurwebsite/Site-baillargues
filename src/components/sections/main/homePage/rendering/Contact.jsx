@@ -1,10 +1,10 @@
 'use client';
 import { motion } from 'framer-motion';
 import { AiTwotoneMail } from 'react-icons/ai';
+import { FaLocationDot } from 'react-icons/fa6';
 import { IoIosPhonePortrait } from 'react-icons/io';
 import { Map } from '../../../../UI/Map';
 import { Reviews } from './Reviews';
-
 export function Contact() {
   return (
     <section id="contact" className="relative mx-6 lg:py-24">
@@ -59,16 +59,23 @@ export function Contact() {
                   href="tel:+33666666666"
                 >
                   <IoIosPhonePortrait />
-                  <p>06 66 66 66 66</p>
+                  <p>04 67 70 04 30</p>
                 </a>
                 <a
-                  className="flex items-center justify-center gap-2 pb-6 lg:justify-start"
-                  href="mailto:contact@gmail.com"
+                  className="flex items-center justify-center gap-2 pb-4 lg:justify-start"
+                  href="mailto:scpveterinaires34@orange.fr"
                 >
                   <AiTwotoneMail />
-                  <p className="">contact@gmail.com</p>
+                  <p className="">scpveterinaires34@orange.fr</p>
                 </a>
               </div>
+              <a
+                className="flex items-center justify-center gap-2 pb-12 lg:justify-start"
+                href="https://maps.app.goo.gl/6ua3z9H6zEWzCmQ16"
+              >
+                <FaLocationDot />
+                <p>Parc Aftalion, 2 Imp. Charles Fourrier, 34670 Baillargues</p>
+              </a>
             </motion.div>
             <div className="w-full lg:w-2/3">
               <Map />

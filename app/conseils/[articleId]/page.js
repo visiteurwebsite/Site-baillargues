@@ -30,7 +30,7 @@ export default function ArticlePage({ params }) {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <div className="relative z-0 pb-16">
+      <div className="relative z-0 py-16">
         <DotPattern
           width={20}
           height={20}
@@ -53,7 +53,7 @@ export default function ArticlePage({ params }) {
             <CardHeader className="relative">
               <div className="relative">
                 <div className="absolute top-10 z-10 mb-4 flex w-full items-start justify-around">
-                  <CardTitle className="text-3xl font-bold ">
+                  <CardTitle className="text-3xl font-bold text-white">
                     {article.title}
                   </CardTitle>
                   <Badge>{article.category}</Badge>
@@ -77,12 +77,20 @@ export default function ArticlePage({ params }) {
               <div className="prose max-w-none space-y-4">
                 {article.sections.map((section, index) => (
                   <div className="space-y-2" key={index}>
-                    <h2 className="text-2xl font-bold">{section.title}</h2>
-                    <p className="text-lg">{section.content}</p>
+                    <h2 className="text-2xl font-bold text-textColor">
+                      {section.title}
+                    </h2>
+                    <p className="text-lg text-black dark:text-textColor">
+                      {section.content}
+                    </p>
                   </div>
                 ))}
-                <h2 className="text-2xl font-bold">Le mot de la fin</h2>
-                <p className="text-lg">{article.conclusion}</p>
+                <h2 className="text-2xl font-bold text-textColor">
+                  Le mot de la fin
+                </h2>
+                <p className="text-lg text-black dark:text-textColor">
+                  {article.conclusion}
+                </p>
               </div>
             </CardContent>
             <CardFooter>

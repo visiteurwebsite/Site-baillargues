@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 export function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -67,9 +67,10 @@ export function FAQ() {
             <div key={index} className="mb-4">
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full text-left text-lg font-semibold text-primary focus:outline-none"
+                className="flex w-3/4 items-center justify-between text-left text-lg font-semibold text-primary focus:outline-none"
               >
                 {faq.question}
+                {activeIndex === index ? <FaChevronUp /> : <FaChevronDown />}
               </button>
               <motion.div
                 initial={{ height: 0, opacity: 0 }}

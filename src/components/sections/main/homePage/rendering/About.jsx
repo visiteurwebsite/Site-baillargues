@@ -89,6 +89,14 @@ export const About = () => {
           </motion.div>
         </div>
       </motion.div>
+      <video
+        src="/video-baillargues.mp4"
+        controls
+        className="mx-auto size-3/4 py-24"
+        loading="lazy"
+      >
+        Votre navigateur ne supporte pas la balise vidéo.
+      </video>
     </section>
   );
 };
