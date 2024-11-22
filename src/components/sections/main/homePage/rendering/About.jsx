@@ -90,7 +90,7 @@ export const About = () => {
         </div>
       </motion.div>
       <video
-        src="/video-baillargues720p.mp4"
+        src="/Video-Baillargues720p.mp4"
         controls
         className="mx-auto py-24  lg:h-screen  lg:py-32"
         loading="lazy"
