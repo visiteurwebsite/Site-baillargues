@@ -19,10 +19,10 @@ export function Footer() {
         <nav className="">
           <ul className="mx-auto flex flex-col text-center">
             <h2 className="pb-4 text-lg font-bold">Liens rapides</h2>
-            {navLinks.map((link) => (
+            {navLinks.map((link, index) => (
               <Link
                 className="text-sm hover:text-primary md:text-base"
-                key={link.id}
+                key={index}
                 href={link.href}
               >
                 {link.name}

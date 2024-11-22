@@ -118,7 +118,8 @@ export const ProductCard = ({ product, translate }) => {
         src={product.thumbnail}
         alt={product.title}
         loading="lazy"
-        layout="fill"
+        fill
+        quality={50}
         className="absolute inset-0 size-full object-cover"
       />
     </motion.div>

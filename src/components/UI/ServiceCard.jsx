@@ -10,8 +10,8 @@ export function ServiceCard({ title, description, image, onClick }) {
         src={image}
         alt={title}
         width={80}
-        height={50}
-        className="mx-auto"
+        height={60}
+        className="mx-auto size-auto"
       />
       <div className="flex flex-col gap-4 p-4">
         <h3 className="mb-2 text-xl font-semibold text-textColor">{title}</h3>
