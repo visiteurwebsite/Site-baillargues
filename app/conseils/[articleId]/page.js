@@ -80,7 +80,7 @@ export default function ArticlePage({ params }) {
                     <h2 className="text-2xl font-bold text-textColor">
                       {section.title}
                     </h2>
-                    <p className="text-lg text-black dark:text-textColor">
+                    <p className="text-lg text-white dark:text-textColor">
                       {section.content}
                     </p>
                   </div>
@@ -88,7 +88,7 @@ export default function ArticlePage({ params }) {
                 <h2 className="text-2xl font-bold text-textColor">
                   Le mot de la fin
                 </h2>
-                <p className="text-lg text-black dark:text-textColor">
+                <p className="text-lg text-white dark:text-textColor">
                   {article.conclusion}
                 </p>
               </div>

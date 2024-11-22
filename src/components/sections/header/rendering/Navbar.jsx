@@ -97,7 +97,7 @@ export default function VetNavbar() {
             <Link
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="w-full uppercase"
+              className="z-50 w-full uppercase"
             >
               {link.name}
             </Link>

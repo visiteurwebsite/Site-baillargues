@@ -87,7 +87,7 @@ export default function Conseils() {
                   {article.categoryImg}
                 </Badge>
               </div>
-              <CardDescription className="font-semibold text-black dark:text-textColor">
+              <CardDescription className="font-semibold text-white dark:text-textColor">
                 {article.introduction}
               </CardDescription>
             </CardHeader>
@@ -95,11 +95,11 @@ export default function Conseils() {
               {/* Espace pour du contenu supplémentaire si nécessaire */}
             </CardContent>
             <CardFooter className="flex items-center justify-between">
-              <div className="text-muted-foreground flex items-center text-sm">
+              <div className="flex items-center text-sm">
                 <CalendarIcon className="mr-1 size-4" />
                 {new Date(article.date).toLocaleDateString()}
               </div>
-              <div className="text-muted-foreground flex items-center text-sm">
+              <div className="flex items-center text-sm">
                 <ClockIcon className="mr-1 size-4" />
                 {article.readTime}
               </div>

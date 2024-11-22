@@ -19,12 +19,12 @@ module.exports = {
       themes: {
         light: {
           colors: {
-            background: '#f9f9fa',
+            background: '#f8fafb',
             textColor: '#172554',
-            primary: '#a5938d',
-            secondary: '#807693',
-            accent: '#beacaf',
-            bulletColor: '#807693'
+            primary: '#59a0b3',
+            secondary: '#58c0dc',
+            accent: '#58c0dc',
+            bulletColor: '#58c0dc'
           }
         },
         dark: {

@@ -61,7 +61,7 @@ export const About = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="relative w-full flex-col items-center gap-8 py-24"
           >
-            <span className="inline-block border-b bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-4xl font-bold text-transparent md:text-6xl lg:pb-6">
+            <span className="inline-block border-b-2 border-primary bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-4xl font-bold text-transparent md:text-6xl lg:pb-6">
               À propos de nous
             </span>
             <p className="mx-auto pt-2 text-center text-xl md:pt-4 lg:pt-6">
@@ -92,8 +92,9 @@ export const About = () => {
       <video
         src="/video-baillargues720p.mp4"
         controls
-        className="mx-auto size-3/4 py-24"
+        className="mx-auto py-24  lg:h-screen  lg:py-32"
         loading="lazy"
+        poster="/logo1.png"
       >
         Votre navigateur ne supporte pas la balise vidéo.
       </video>

@@ -17,7 +17,7 @@ export function SwiperTeams() {
         transition={{ duration: 0.5, delay: 0.3 }}
         className="container mx-auto flex flex-col items-center gap-4 pb-10 pt-24 text-center"
       >
-        <span className="inline-block border-b-2 bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-4xl font-bold text-transparent md:text-6xl lg:pb-4">
+        <span className="inline-block border-b-2 border-primary bg-gradient-to-r from-primary to-secondary bg-clip-text pb-2 text-4xl font-bold text-transparent md:text-6xl lg:pb-4">
           Notre équipe
         </span>
 
